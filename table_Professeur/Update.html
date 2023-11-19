@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f5f9;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 15px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+    
+</head>
+<body>
+    <form method="post" action="Update.php">
+        <h1>INFORMATION DU PROF</h1>
+        <label for="matriculeProf">Matricule Prof</label>
+        <input type="text" id="matriculeProf" name="matriculeProf" placeholder="Matricule Prof" required></br></br>
+        
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" placeholder="Nom" required></br></br>
+        
+        <label for="prenom">Prénom</label>
+        <input type="text" id="prenom" name="prenom" placeholder="Prénom" required></br></br>
+        
+        <label for="cinPasseport">CIN ou Passeport</label>
+        <input type="text" id="cinPasseport" name="cinPasseport" placeholder="CIN ou Passeport" required></br></br>
+        
+        <label for="identifiantCNRPS">Identifiant CNRPS</label>
+        <input type="text" id="identifiantCNRPS" name="identifiantCNRPS" placeholder="Identifiant CNRPS"></br></br>
+        
+        <label for="dateNaissance">Date de naissance</label>
+<input type="datetime-local" id="dateNaissance" name="dateNaissance" placeholder="Date de naissance"></br></br>
+
+        
+        <label for="nationalite">Nationalité</label>
+        <input type="text" id="nationalite" name="nationalite" placeholder="Nationalité"></br></br>
+        
+        <label for="sexe">Sexe (M/F)</label>
+        <input type="text" id="sexe" name="sexe" placeholder="Sexe (M/F)"></br></br>
+        
+        <label for="dateEntAdm">Date Ent Adm</label>
+        <input type="datetime-local" id="dateEntAdm" name="dateEntAdm" placeholder="Date Ent Adm"></br></br>
+        
+        <label for="dateEntEtbs">Date Ent Etbs</label>
+        <input type="datetime-local" id="dateEntEtbs" name="dateEntEtbs" placeholder="Date Ent Etbs"></br></br>
+        
+        <label for="diplome">Diplôme</label>
+        <input type="text" id="diplome" name="diplome" placeholder="Diplôme"></br></br>
+        
+        <label for="adresse">Adresse</label>
+        <input type="text" id="adresse" name="adresse" placeholder="Adresse"></br></br>
+        
+        <label for="ville">Ville</label>
+        <input type="text" id="ville" name="ville" placeholder="Ville"></br></br>
+        
+        <label for="codePostal">Code postal</label>
+        <input type="text" id="codePostal" name="codePostal" placeholder="Code postal"></br></br>
+        
+        <label for="telephone">N° Téléphone</label>
+        <input type="text" id="telephone" name="telephone" placeholder="N° Téléphone"></br></br>
+        
+        <label for="grade">Grade</label>
+        <input type="text" id="grade" name="grade" placeholder="Grade"></br></br>
+        
+        <label for="dateNominationGrade">Date de nomination dans le grade</label>
+        <input type="text" id="dateNominationGrade" name="dateNominationGrade" placeholder="Date de nomination dans le grade"></br></br>
+        
+        <label for="dateTitularisation">Date de titularisation</label>
+        <input type="datetime-local" id="dateTitularisation" name="dateTitularisation" placeholder="Date de titularisation"></br></br>
+        
+        <label for="nPoste">N° Poste</label>
+        <input type="text" id="nPoste" name="nPoste" placeholder="N° Poste"></br></br>
+        
+        <label for="departement">Département</label>
+        <input type="text" id="departement" name="departement" placeholder="Département"></br></br>
+        
+        <label for="situation">Situation</label>
+        <input type="text" id="situation" name="situation" placeholder="Situation"></br></br>
+        
+        <label for="specialite">Spécialité</label>
+        <input type="text" id="specialite" name="specialite" placeholder="Spécialité"></br></br>
+        
+        <label for="nCompte">N° de Compte</label>
+        <input type="text" id="nCompte" name="nCompte" placeholder="N° de Compte"></br></br>
+        
+        <label for="banque">Banque</label>
+        <input type="text" id="banque" name="banque" placeholder="Banque"></br></br>
+        
+        <label for="agence">Agence</label>
+        <input type="text" id="agence" name="agence" placeholder="Agence"></br></br>
+        
+        <label for="adrVacances">Adr pendant les vacances</label>
+        <input type="text" id="adrVacances" name="adrVacances" placeholder="Adr pendant les vacances"></br></br>
+        
+        <label for="telVacances">Tél pendant les vacances</label>
+        <input type="text" id="telVacances" name="telVacances" placeholder="Tél pendant les vacances"></br></br>
+        
+        <label for="lieuNaissance">Lieu de naissance</label>
+        <input type="text" id="lieuNaissance" name="lieuNaissance" placeholder="Lieu de naissance"></br></br>
+        
+        <label for="debutContrat">Début du Contrat</label>
+        <input type="datetime-local" id="debutContrat" name="debutContrat" placeholder="Début du Contrat"></br></br>
+        
+        <label for="finContrat">Fin du Contrat</label>
+        <input type="datetime-local" id="finContrat" name="finContrat" placeholder="Fin du Contrat"></br></br>
+        
+        <label for="typeContrat">Type de Contrat</label>
+        <input type="text" id="typeContrat" name="typeContrat" placeholder="Type de Contrat"></br></br>
+        
+        <label for="nbContratISETSOUSSE">NB contrat ISETSOUSSE</label>
+        <input type="text" id="nbContratISETSOUSSE" name="nbContratISETSOUSSE" placeholder="NB contrat ISETSOUSSE"></br></br>
+        
+        <label for="nbContratAutreEtb">NB contrat Autre Etb</label>
+        <input type="text" id="nbContratAutreEtb" name="nbContratAutreEtb" placeholder="NB contrat Autre Etb"></br></br>
+        
+        <label for="bureau">Bureau</label>
+        <input type="text" id="bureau" name="bureau" placeholder="Bureau"></br></br>
+        
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Email"></br></br>
+        
+        <label for="emailInterne">Email Interne</label>
+        <input type="text" id="emailInterne" name="emailInterne" placeholder="Email Interne"></br></br>
+        
+        <label for="nomArabe">NomArabe</label>
+        <input type="text" id="nomArabe" name="nomArabe" placeholder="NomArabe"></br></br>
+        
+        <label for="prenomArabe">PrenomArabe</label>
+        <input type="text" id="prenomArabe" name="prenomArabe" placeholder="PrenomArabe"></br></br>
+        
+        <label for="lieuNaisArabe">LieuNaisArabe</label>
+        <input type="text" id="lieuNaisArabe" name="lieuNaisArabe" placeholder="LieuNaisArabe"></br></br>
+        
+        <label for="adresseArabe">AdresseArabe</label>
+        <input type="text" id="adresseArabe" name="adresseArabe" placeholder="AdresseArabe"></br></br>
+        
+        <label for="villeArabe">VilleArabe</label>
+        <input type="text" id="villeArabe" name="villeArabe" placeholder="VilleArabe"></br></br>
+        
+        <label for="disponible">Disponible</label>
+        <input type="text" id="disponible" name="disponible" placeholder="Disponible"></br></br>
+        
+        <label for="sousSP">SousSP</label>
+        <input type="text" id="sousSP" name="sousSP" placeholder="SousSP"></br></br>
+        
+        <label for="etbOrigine">EtbOrigine</label>
+        <input type="text" id="etbOrigine" name="etbOrigine" placeholder="EtbOrigine"></br></br>
+        
+        <label for="typeEnsg">TypeEnsg</label>
+        <input type="text" id="typeEnsg" name="typeEnsg" placeholder="TypeEnsg"></br></br>
+        
+        <label for="controlAcces">ControlAcces</label>
+        <input type="text" id="controlAcces" name="controlAcces" placeholder="ControlAcces"></br></br>
+
+        <button type="submit">Modifier</button>
+
+    </form>
+    
+</body>
+</html>
