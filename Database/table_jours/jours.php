@@ -72,7 +72,7 @@ if(isset($_POST['ajout_jours'])) {
 
     // Si aucune erreur n'est détectée, effectuer l'insertion
     if (empty($errors)) {
-        $sql = "INSERT INTO jours(code_prof, Session, Jours, Seance, Annee_universaire, Semestre) VALUES('$code_prof', '$Session', '$Jours', '$seance', '$Annee_universaire', '$Semestre')";
+        $sql = "INSERT INTO Jours(code_prof, Session, Jours, Seance, Annee_universaire, Semestre) VALUES('$code_prof', '$Session', '$Jours', '$seance', '$Annee_universaire', '$Semestre')";
         $idcon->exec($sql);
 
         header("Location: projet.php");
@@ -118,7 +118,7 @@ if(isset($_POST['modifier_jours'])) {
 if(isset($_POST['supprimer'])) {
     $where = $_POST['new'];
 
-    $sql = "DELETE FROM jours WHERE Code_prof='$where'";
+    $sql = "DELETE FROM Jours WHERE Code_prof='$where'";
     $idcon->exec($sql);
 
     header("Location: projet.php");
@@ -137,7 +137,7 @@ $errors = array(); // Tableau pour stocker les erreurs
 if(isset($_POST['chercher'])) {
     $id = $_POST['change'];
 
-    $q = $idcon->prepare("SELECT code_prof, Session, Jours, Seance, Annee_universaire, Semestre FROM jours WHERE code_prof=:id");
+    $q = $idcon->prepare("SELECT code_prof, Session, Jours, Seance, Annee_universaire, Semestre FROM Jours WHERE code_prof=:id");
     $q->bindParam(':id', $id);
     $q->execute();
     $result = $q->fetch(PDO::FETCH_ASSOC);

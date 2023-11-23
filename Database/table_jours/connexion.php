@@ -8,9 +8,9 @@
 <body>
 <?php 
 $host="localhost";
-$user="root";
-$password="";
-$db="scolarite";
+$user="user";
+$password="user";
+$db="Scolarite";
 $DSN="mysql:host=$host;dbname=$db";
 try
 {
