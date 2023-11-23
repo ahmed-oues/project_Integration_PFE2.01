@@ -9,9 +9,9 @@
 <body>
 <?php
 $host="localhost";
-$user="root";
-$password="";
-$db="scolarite";
+$user="user";
+$password="user";
+$db="Scolarite";
 try {
     
     $idcom = new PDO("mysql:host=$host; dbname=$db", $user, $password);
