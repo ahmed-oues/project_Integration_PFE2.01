@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
-$user = "root";
-$password = "root";
+$user = "user";
+$password = "user";
 $database = "Scolarite";
 $mysqli = new mysqli($host, $user, $password, $database);
 $statut = "Not Connected";
