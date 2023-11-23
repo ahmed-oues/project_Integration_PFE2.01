@@ -1,7 +1,7 @@
 <?php 
 include_once "connexion.php";
 
-$d = $idcon->query($sql = "SELECT * FROM jours");
+$d = $idcon->query($sql = "SELECT * FROM Jours");
 $d->execute();
 
 $res = $d->fetchAll();
