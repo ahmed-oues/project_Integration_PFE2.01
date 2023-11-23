@@ -1,0 +1,79 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+form {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 400px;
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+}
+
+
+label { 
+     font-family: "VotrePolice", sans-serif; 
+    color: #00c0fa; 
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.Semaine{
+    text-align: center;
+    color: rgb(9, 255, 0);
+    font-family:'Courier New', Courier, monospace ;
+    font-size: 30px;
+}
+
+input[type="submit"] {
+    width: auto; 
+    display: flex; 
+    margin: 0 auto; 
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    background-color: #407242;}
+
+    input[type="reset"] {
+        width: auto; 
+        display: flex;
+        margin: 0 auto; 
+        cursor: pointer;
+        border-radius: 5px;
+        border: none;
+        padding: 10px 20px;
+        background-color: #407242;}
+
+input[type="submit"]:hover{
+    background-color: #4CAF50;
+}
+
+input[type="reset"]:hover{
+    background-color: rgb(247, 0, 0);
+}
+
+
