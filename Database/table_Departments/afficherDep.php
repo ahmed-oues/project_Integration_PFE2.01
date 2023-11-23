@@ -1,6 +1,6 @@
 <?php
 require 'connexion.php';
-$req = $idcom->prepare("SELECT CodeDep, Département, Responsable, MatProf, DepartementARAB FROM Departements");
+$req = $idcom->prepare("SELECT CodeDep, Departement, Responsable, MatProf, DepartementARAB FROM Departements");
 $req->execute();
 $count = $req->rowCount();
 ?>
@@ -30,7 +30,7 @@ $count = $req->rowCount();
                 <?php while ($row = $req->fetch(PDO::FETCH_ASSOC)): ?>
                     <tr>
                         <td><?php echo htmlspecialchars($row['CodeDep']); ?></td>
-                        <td><?php echo htmlspecialchars($row['Département']); ?></td>
+                        <td><?php echo htmlspecialchars($row['Departement']); ?></td>
                         <td><?php echo htmlspecialchars($row['Responsable']); ?></td>
                         <td><?php echo htmlspecialchars($row['MatProf']); ?></td>
                         <td><?php echo htmlspecialchars($row['DepartementARAB']); ?></td>
