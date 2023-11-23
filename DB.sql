@@ -134,13 +134,13 @@ CREATE TABLE Jours (
     CodeProf SMALLINT NULL,
     CONSTRAINT PK_Jours PRIMARY KEY NONCLUSTERED (N)
 );
--- eroord
+ --Corrected SQL DB (Working with mysqli)
 CREATE TABLE Options (
     `Option` CHAR(55) NOT NULL,
-    Departement CHAR(55) NULL,
-    OptionAraB CHAR(55) NULL,
-    CodeOption INT NULL,
-    PRIMARY KEY (`Option`)
+    `Département` CHAR(55) NOT NULL,
+    `OptionAraB` CHAR(55) NULL,
+    `CodeOption` INT NULL,
+    UNIQUE KEY `unique_option_departement` (`Option`, `Département`)
 );
 
 
