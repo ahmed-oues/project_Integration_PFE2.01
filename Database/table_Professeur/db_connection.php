@@ -1,8 +1,8 @@
 <?php
 $host="localhost";
-$user="root";
-$password="";
-$db="projetphp";
+$user="user";
+$password="user";
+$db="Scolarite";
 //connexion au serveur
 try{
 $idcon=new PDO("mysql:host=$host;dbname=$db",$user,$password);
