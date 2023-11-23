@@ -4,15 +4,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        
-    </style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background:
+    url(https://source.unsplash.com/E8Ufcyxz514/2400x1823)
+    center / cover no-repeat fixed;
+        }
+        h1{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding: 50px;
+        }
+        h2{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding-left: 100px;
+        }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 60px;
+    }
+
+    a {
+        display: block;
+        text-decoration:solid;
+        color: #333;
+        padding: 20px;
+        text-align:center;
+        line-height: 9;
+        transition: background-color 0.3s ease;
+        height: 150px;
+
+        border: 1px solid rgba(255, 255, 255, .25);
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.45);
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+
+        backdrop-filter: blur(15px);
+    }
+
+    a:hover {
+        background-color: #ddd;
+    }
+
+
+     </style>
 </head>
 <body>
     <h1>Databases : Scolarity</h1>
-    <h1>List of Tables : </h1>
+    <h2>List of Tables : </h2>
+    <div class="gallery" >
     <a href="/Database/table_profSituation/home.php">ProfSituation</a>
-    <a href="/Database/table_session/affichesession.php">session</a>
-    <a href="">gouvernorats</a>  <!-- no database -->
+    <a href="/Database/table_session/affichesession.php">Session</a>
+    <a href="">Gouvernorats</a>  <!-- no database -->
     <a href="Database/table_RatVol/index.php">RatVol</a>
     <a href="Database/table_Etudiant/showAllletudiants.php">Etudiant</a>
     <a href="Database/table_Matiers/Sami Kechiche - Table Matiers/projet_integration/index.php">Matieres</a>
@@ -20,11 +67,12 @@
     <a href="Database/table_jours/afficherjours.php">Jours</a>
     <a href="Database/table_option/home.php">Options</a>
     <a href="Database/table_typelocal/view.php">TypeLocal</a>
-    <a href="Database/">SEANCES</a>  <!-- no database -->
-    <a href="Database/table_session/">sess</a>
+    <a href="Database/">Seances</a>  <!-- no database -->
+    <a href="Database/table_session/">Sess</a>
     <a href="Database/">Grades</a> <!-- no database -->
     <a href="Database/table_semaine/index.php">Semaine</a>
     <a href="Database/table_Inscriptions/index.html">Inscriptions</a>
     <a href="Database/table_dossieretud/affichage.php">DossierEtud</a>
+</div>
 </body>
 </html>
