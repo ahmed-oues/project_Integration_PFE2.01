@@ -31,10 +31,11 @@ CREATE TABLE RatVol (
     Session INT NOT NULL,
     Salle CHAR(10) NOT NULL,
     Jour CHAR(10) NOT NULL,
-    CodeClasse CHAR(9) NULL,
-    CodeMatiere CHAR(10) NULL,
-    Etat BIT NOT NULL
+    CodeClasse CHAR(9) DEFAULT NULL,
+    CodeMatiere CHAR(10) DEFAULT NULL,
+    Etat BIT(1) NOT NULL
 );
+
 
 CREATE TABLE Classe (
     CodClasse CHAR(9) NOT NULL,
