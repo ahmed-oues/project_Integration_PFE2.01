@@ -134,7 +134,7 @@ CREATE TABLE Jours (
     CodeProf SMALLINT NULL,
     CONSTRAINT PK_Jours PRIMARY KEY NONCLUSTERED (N)
 );
- --Corrected SQL DB (Working with mysqli)
+ --Corrected SQL DB (Working with mysqli)   
 CREATE TABLE Options (
     `Option` CHAR(55) NOT NULL,
     `Département` CHAR(55) NOT NULL,
