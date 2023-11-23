@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
 $user = 'root';
-$password = '';
-$db = 'scolarite';
+$password = 'password';
+$db = 'Scolarite';
 
 try {
     $idcom = new PDO("mysql:host=$host; dbname=$db", $user, $password);
