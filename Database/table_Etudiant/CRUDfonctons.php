@@ -15,7 +15,7 @@ function processForm($data) {
                 $classCode=$data[$field];
                 require_once 'conect.php';
                    
-                $stmt = $conn->query("SELECT * FROM Classe WHERE CodClasse = '$content' ");
+                $stmt = $conn->query("SELECT * FROM Classe WHERE CodClasse = '$classCode' ");
                 $etudiants = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 require_once 'closeconn.php';
                 if (empty($etudiants)) {

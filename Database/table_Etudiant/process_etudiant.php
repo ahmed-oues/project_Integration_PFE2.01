@@ -41,19 +41,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         "NBAC" => $_POST["NBAC"],
         "Redaut" => $_POST["Redaut"]
     );
-
-    $errors[]=processForm($data);
+    print_r($data);
+ //   $errors[]=processForm($data);
     
-    if (empty($errors)) {
+    // if (empty($errors)) {
         insertData($data);
         echo "Etudiant ajouter!!";
         header("location: showAllletudiants.php");
 
 
-    } else {
-        echo "Validation failed. Errors: ";
-        print_r($errors);
-    }
+    // } else {
+    //     echo "Validation failed. Errors: ";
+    //     print_r($errors);
+    // }
 
 }
 ?>
