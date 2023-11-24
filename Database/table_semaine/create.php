@@ -9,14 +9,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $DateFin = $_POST["DateFin"];
     $Session = $_POST["Session"];
 
-    $sql = "INSERT INTO semaine (DateDebut, DateFin, Session) VALUES ('$DateDebut', '$DateFin', '$Session')";
+    // Check if the session number already exists
+    $checkSessionQuery = "SELECT * FROM semaine WHERE Session = '$Session'";
+    $checkSessionResult = $conn->query($checkSessionQuery);
 
-    $res = $conn->query($sql);
-
-    if ($res) {
-        $successMessage = "Semaine ajoutée avec succès";
+    if ($checkSessionResult->num_rows > 0) {
+        $errorMessage = "Erreur : Le numéro de session existe déjà.";
     } else {
-        $errorMessage = "Erreur lors de l'ajout de la semaine : " . $conn->error;
+        // Check if the difference between dates is greater than 7 days
+        $daysDifference = (strtotime($DateFin) - strtotime($DateDebut)) / (60 * 60 * 24);
+
+        if ($daysDifference > 7) {
+            $errorMessage = "Erreur : La période entre la date de début et la date de fin ne peut pas dépasser 7 jours.";
+        } else {
+            // If the session number doesn't exist and the date difference is acceptable, proceed with the insertion
+            $sql = "INSERT INTO semaine (DateDebut, DateFin, Session) VALUES ('$DateDebut', '$DateFin', '$Session')";
+
+            $res = $conn->query($sql);
+
+            if ($res) {
+                $successMessage = "Semaine ajoutée avec succès";
+            } else {
+                $errorMessage = "Erreur lors de l'ajout de la semaine : " . $conn->error;
+            }
+        }
     }
 }
 ?>
@@ -87,4 +103,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     </script>
 </body>
-</html
+</html>

@@ -35,13 +35,23 @@ if (isset($_POST['update'])) {
     $DateFin = $_POST['DateFin'];
     $Session = $_POST['Session'];
 
-    $sql2 = "UPDATE semaine SET DateDebut='$DateDebut', DateFin='$DateFin', Session='$Session' WHERE NumSem = $NumSem";
-    $res = $conn->query($sql2);
+    // Validate dates
+    $startDate = new DateTime($DateDebut);
+    $endDate = new DateTime($DateFin);
+    $daysDifference = $startDate->diff($endDate)->days;
 
-    if ($res) {
-        $successMessage = "Data updated successfully";
+    if ($daysDifference > 7) {
+        $errorMessage = "Erreur : La période entre la date de début et la date de fin ne peut pas dépasser 7 jours.";
     } else {
-        $errorMessage = "Error updating data: " . $conn->error;
+        // Proceed with the update
+        $sql2 = "UPDATE semaine SET DateDebut='$DateDebut', DateFin='$DateFin', Session='$Session' WHERE NumSem = $NumSem";
+        $res = $conn->query($sql2);
+
+        if ($res) {
+            $successMessage = "Data updated successfully";
+        } else {
+            $errorMessage = "Error updating data: " . $conn->error;
+        }
     }
 }
 ?>
