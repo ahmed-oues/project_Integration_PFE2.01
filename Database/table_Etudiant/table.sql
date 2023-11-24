@@ -51,9 +51,9 @@ CREATE TABLE Etudiant (
     Redaut TINYINT NULL,
     PRIMARY KEY (NCIN)
 );
-INSERT INTO Classe (CodClasse, IntClasse, Département, ClassOption, Niveau, IntCalsseArabB, OptionAaraB, DepartementAaraB, NiveauAaraB, CodeEtape, CodeSalima)
+INSERT INTO Classe (CodClasse, IntClasse, Departement, ClassOption, Niveau, IntCalsseArabB, OptionAaraB, DepartementAaraB, NiveauAaraB, CodeEtape, CodeSalima)
 VALUES 
     ('CL002', 'Physics A', 'Physics Department', 'Quantum Physics', 'Undergraduate', 'Arabic Class B', 'Physics Arabic', 'Physics Arabic Department', 'Undergraduate Arabic', 'PH101', 'SAL002'),
     ('CL003', 'Mathematics A', 'Mathematics Department', 'Pure Mathematics', 'Undergraduate', 'Arabic Class C', 'Mathematics Arabic', 'Mathematics Arabic Department', 'Undergraduate Arabic', 'MA101', 'SAL003');
 INSERT INTO Classe (CodClasse, IntClasse, Departement, ClassOption, Niveau, IntCalsseArabB, OptionAaraB, DepartementAaraB, NiveauAaraB, CodeEtape, CodeSalima)
-VALUES ('CL001', 'Computer Science A', 'Computer Science Department', 'Programming', 'Undergraduate', 'Arabic Class A', 'Programming Arabic', 'Computer Science Arabic', 'Undergraduate Arabic', 'CS101', 'SAL001');
+VALUES ('CL001', 'Computer Science A', 'Computer Science Department', 'Programming', 'Underg', 'Arabic Class A', 'Programming Arabic', 'Computer Science Arabic', 'Undergr', 'CS101', 'SAL001');
