@@ -1,7 +1,7 @@
 <?php 
 $serverName="localhost";
-$user="root";
-$pwd="";
+$user="user";
+$pwd="user";
 $db="Scolarite";
 
 
