@@ -16,9 +16,9 @@
 
 
         $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "etude";
+        $username = "user";
+        $password = "user";
+        $dbname = "Scolarite";
         
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

@@ -1,9 +1,9 @@
 <?php
 // Connexion à la base de données MySQL
 $servername = "localhost"; // Remplacez par le nom de votre serveur MySQL
-$username = "root"; // Remplacez par votre nom d'utilisateur MySQL
-$password = ""; // Remplacez par votre mot de passe MySQL
-$dbname = "etude"; // Remplacez par le nom de votre base de données MySQL
+$username = "user"; // Remplacez par votre nom d'utilisateur MySQL
+$password = "user"; // Remplacez par votre mot de passe MySQL
+$dbname = "Scolarite"; // Remplacez par le nom de votre base de données MySQL
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

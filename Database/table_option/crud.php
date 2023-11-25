@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $optionAraB = $_POST['OptionAraB'];
         $codeOption = intval($_POST['CodeOption']);
 
-        $checkSql = "SELECT COUNT(*) FROM Options WHERE `Option` = ? AND `Département` = ?";
+        $checkSql = "SELECT COUNT(*) FROM Options WHERE `Option` = ? AND `Departement` = ?";
 
         $checkStmt = $conn->prepare($checkSql);
         $checkStmt->bind_param("ss", $option, $département);
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($count > 0) {
             echo "Cette Option Département combination existe deja.";
         } else {
-            $insertSql = "INSERT INTO Options (`Option`, `Département`, `OptionAraB`, `CodeOption`) VALUES (?, ?, ?, ?)";
+            $insertSql = "INSERT INTO Options (`Option`, `Departement`, `OptionAraB`, `CodeOption`) VALUES (?, ?, ?, ?)";
             $insertStmt = $conn->prepare($insertSql);
             $insertStmt->bind_param("sssi", $option, $département, $optionAraB, $codeOption);
             if ($insertStmt->execute()) {

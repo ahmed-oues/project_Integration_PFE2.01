@@ -38,11 +38,8 @@
             color: #ff5c5c;
         }
     </style>
-
-
 <?php
 include_once "connexion.php";
-
 
 $errors = array(); // Tableau pour stocker les erreurs
 
