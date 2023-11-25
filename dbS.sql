@@ -35,7 +35,7 @@ CREATE TABLE `Classe` (
   `CodeEtape` varchar(8) DEFAULT NULL,
   `CodeSalima` varchar(15) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
   PRIMARY KEY (`CodClasse`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,6 +44,7 @@ CREATE TABLE `Classe` (
 
 LOCK TABLES `Classe` WRITE;
 /*!40000 ALTER TABLE `Classe` DISABLE KEYS */;
+INSERT INTO `Classe` VALUES ('CL001','Computer Science A','Computer Science Department','Programming','Underg','Arabic Class A','Programming Arabic','Computer Science Arabic','Undergr','CS101','SAL001');
 /*!40000 ALTER TABLE `Classe` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -61,7 +62,7 @@ CREATE TABLE `Departements` (
   `DepartementARAB` char(55) DEFAULT NULL,
   `CodeDep` char(2) NOT NULL,
   PRIMARY KEY (`CodeDep`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -70,7 +71,6 @@ CREATE TABLE `Departements` (
 
 LOCK TABLES `Departements` WRITE;
 /*!40000 ALTER TABLE `Departements` DISABLE KEYS */;
-INSERT INTO `Departements` VALUES ('infoo','rouitbi adnen','123','dep arab','1');
 /*!40000 ALTER TABLE `Departements` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -90,7 +90,7 @@ CREATE TABLE `DossierEtud` (
   `Session` int DEFAULT NULL,
   `nomfichierpiece` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`Ndossier`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -147,7 +147,7 @@ CREATE TABLE `Etudiant` (
   `Redaut` tinyint DEFAULT NULL,
   PRIMARY KEY (`NCIN`),
   UNIQUE KEY `NCIN` (`NCIN`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -170,7 +170,7 @@ CREATE TABLE `Gouvernorats` (
   `Gouv` varchar(20) NOT NULL,
   `CodPostal` int NOT NULL,
   PRIMARY KEY (`Gouv`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -198,7 +198,7 @@ CREATE TABLE `Grades` (
   `ChargeCI` double DEFAULT NULL,
   `ChargeTotal` double DEFAULT NULL,
   PRIMARY KEY (`Grade`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -207,6 +207,7 @@ CREATE TABLE `Grades` (
 
 LOCK TABLES `Grades` WRITE;
 /*!40000 ALTER TABLE `Grades` DISABLE KEYS */;
+INSERT INTO `Grades` VALUES ('A',3.5,4,3,'أ',2.5,16);
 /*!40000 ALTER TABLE `Grades` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -239,7 +240,7 @@ CREATE TABLE `Inscriptions` (
   `NoteSO` double DEFAULT NULL,
   `NoteST` double DEFAULT NULL,
   PRIMARY KEY (`NumIns`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -268,7 +269,7 @@ CREATE TABLE `Jours` (
   `Samedi` char(10) DEFAULT NULL,
   `CodeProf` smallint DEFAULT NULL,
   PRIMARY KEY (`N`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -303,7 +304,7 @@ CREATE TABLE `Matieres` (
   `DateDeb` datetime DEFAULT NULL,
   `DateFin` datetime DEFAULT NULL,
   PRIMARY KEY (`CodeMatiere`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -326,7 +327,7 @@ CREATE TABLE `OptionNiveau` (
   `OptionNiveau` char(55) NOT NULL,
   `Niveau` char(12) NOT NULL,
   PRIMARY KEY (`OptionNiveau`,`Niveau`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -351,7 +352,7 @@ CREATE TABLE `Options` (
   `OptionAraB` char(55) DEFAULT NULL,
   `CodeOption` int DEFAULT NULL,
   PRIMARY KEY (`Option`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -361,6 +362,30 @@ CREATE TABLE `Options` (
 LOCK TABLES `Options` WRITE;
 /*!40000 ALTER TABLE `Options` DISABLE KEYS */;
 /*!40000 ALTER TABLE `Options` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Prof`
+--
+
+DROP TABLE IF EXISTS `Prof`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `Prof` (
+  `MatriculeProf` int NOT NULL,
+  `nom` char(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  PRIMARY KEY (`MatriculeProf`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Prof`
+--
+
+LOCK TABLES `Prof` WRITE;
+/*!40000 ALTER TABLE `Prof` DISABLE KEYS */;
+INSERT INTO `Prof` VALUES (123456,'Professor Name');
+/*!40000 ALTER TABLE `Prof` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -376,7 +401,7 @@ CREATE TABLE `ProfSituation` (
   `Situation` varchar(35) DEFAULT NULL,
   `Grade` varchar(25) DEFAULT NULL,
   PRIMARY KEY (`CodeProf`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -385,6 +410,7 @@ CREATE TABLE `ProfSituation` (
 
 LOCK TABLES `ProfSituation` WRITE;
 /*!40000 ALTER TABLE `ProfSituation` DISABLE KEYS */;
+INSERT INTO `ProfSituation` VALUES (123456,1,'New Situation','A');
 /*!40000 ALTER TABLE `ProfSituation` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -407,7 +433,7 @@ CREATE TABLE `RatVol` (
   `CodeMatiere` char(10) DEFAULT NULL,
   `Etat` bit(1) NOT NULL,
   PRIMARY KEY (`NumRatV`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -432,7 +458,7 @@ CREATE TABLE `SEANCES` (
   `HDeb` char(10) DEFAULT NULL,
   `HFin` char(10) DEFAULT NULL,
   PRIMARY KEY (`SEANCE`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -457,7 +483,7 @@ CREATE TABLE `Semaine` (
   `DateFin` datetime DEFAULT NULL,
   `Session` int NOT NULL,
   PRIMARY KEY (`NumSem`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -488,7 +514,7 @@ CREATE TABLE `Session` (
   `Anneab` char(5) DEFAULT NULL,
   `SemAb` char(1) DEFAULT NULL,
   PRIMARY KEY (`Numero`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -497,7 +523,32 @@ CREATE TABLE `Session` (
 
 LOCK TABLES `Session` WRITE;
 /*!40000 ALTER TABLE `Session` DISABLE KEYS */;
+INSERT INTO `Session` VALUES (1,'2023','1','2023-11-25 09:00:00','2023-11-25 17:00:00','2023-11-25 09:00:00','2023-11-25 17:00:00','2024','2025','2');
 /*!40000 ALTER TABLE `Session` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Situation`
+--
+
+DROP TABLE IF EXISTS `Situation`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `Situation` (
+  `SituationID` int NOT NULL,
+  `SituationName` varchar(35) COLLATE utf8mb4_general_ci NOT NULL,
+  PRIMARY KEY (`SituationID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Situation`
+--
+
+LOCK TABLES `Situation` WRITE;
+/*!40000 ALTER TABLE `Situation` DISABLE KEYS */;
+INSERT INTO `Situation` VALUES (1,'New Situation');
+/*!40000 ALTER TABLE `Situation` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -511,7 +562,7 @@ CREATE TABLE `TypeLocal` (
   `TypeLocal` varchar(25) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
   `Gategorie` varchar(25) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
   PRIMARY KEY (`TypeLocal`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -544,7 +595,7 @@ CREATE TABLE `sess` (
   `Ann4ab` char(9) DEFAULT NULL,
   `SemAb` char(10) DEFAULT NULL,
   PRIMARY KEY (`Numero`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -565,4 +616,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-23 18:07:25
+-- Dump completed on 2023-11-25 19:39:48
