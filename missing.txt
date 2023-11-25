@@ -3,3 +3,14 @@ molka batout : table seance
 woiame sessi : table grad 
 sarra manne3i: table ses
 
+
+
+CREATE TABLE `Semaine` (
+  `NumSem` int NOT NULL AUTO_INCREMENT,
+  `DateDebut` datetime DEFAULT NULL,
+  `DateFin` datetime DEFAULT NULL,
+  `Session` int NOT NULL,
+  PRIMARY KEY (`NumSem`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
