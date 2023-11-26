@@ -4,7 +4,7 @@ include 'connect.php';
     $searchTerm = isset($_POST['search']) ? $_POST['search'] : '';
     $searchCriteria = isset($_POST['criteria']) ? $_POST['criteria'] : 'column_name';
     if (!empty($searchTerm)) {
-        $sql = "SELECT * FROM matieres WHERE $searchCriteria LIKE '%$searchTerm%'";
+        $sql = "SELECT * FROM Matieres WHERE $searchCriteria LIKE '%$searchTerm%'";
         $result = $conn->query($sql);
 
     }
@@ -120,14 +120,14 @@ tr:nth-child(even) {
                     Search <input type="text" name="search"><br>
                     
 Column: <select name="criteria">
-	<option value="Code_Matiere">Code Matière</option>
-	<option value="Nom_Matiere">Nom Matière</option>
-	<option value="Coef_Matiere">Coef Matière</option>
+	<option value="CodeMatiere">Code Matière</option>
+	<option value="NomMatiere">Nom Matière</option>
+	<option value="CoefMatiere">Coef Matière</option>
     <option value="Departement">Departement</option>
 	<option value="Semestre">Semestre</option>
-	<option value="Options">Options</option>
-    <option value="Nb_Heure_CI">Nb_Heure_CI</option>
-	<option value="Nb_Heure_TP">Nb_Heure_TP</option>
+	<option value="OptionMatiere">Options</option>
+    <option value="NbHeureCI">Nb_Heure_CI</option>
+	<option value="NbHeureTP">Nb_Heure_TP</option>
 	<option value="TypeLabo">TypeLabo</option>
     <option value="Bonus">Bonus</option>
 	<option value="Categories">Categories</option>
@@ -174,21 +174,21 @@ Column: <select name="criteria">
 
             <tr>
 
-            <td><?php echo $row['Code_Matiere']; ?></td>
+            <td><?php echo $row['CodeMatiere']; ?></td>
 
-            <td><?php echo $row['Nom_Matiere']; ?></td>
+            <td><?php echo $row['NomMatiere']; ?></td>
 
-            <td><?php echo $row['Coef_Matiere']; ?></td>
+            <td><?php echo $row['CoefMatiere']; ?></td>
 
             <td><?php echo $row['Departement']; ?></td>
 
             <td><?php echo $row['Semestre']; ?></td>
 
-            <td><?php echo $row['Options']; ?></td>
+            <td><?php echo $row['OptionMatiere']; ?></td>
             
-            <td><?php echo $row['Nb_Heure_CI']; ?></td>
+            <td><?php echo $row['NbHeureCI']; ?></td>
 
-            <td><?php echo $row['Nb_Heure_TP']; ?></td>
+            <td><?php echo $row['NbHeureTP']; ?></td>
 
             <td><?php echo $row['TypeLabo']; ?></td>
 
@@ -205,8 +205,8 @@ Column: <select name="criteria">
   
 
             <td>
-            <a href="UpdateMatier.php?id=<?php echo $row['PK_Matieres']; ?>" class="button">Update</a>
-            <a href="DeleteMatier.php?id=<?php echo $row['PK_Matieres']; ?>" class="button">Delete</a>
+            <a href="UpdateMatier.php?id=<?php echo $row['CodeMatiere']; ?>" class="button">Update</a>
+            <a href="DeleteMatier.php?id=<?php echo $row['CodeMatiere']; ?>" class="button">Delete</a>
             </tr>                       
        
 <?php       }

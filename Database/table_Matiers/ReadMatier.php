@@ -1,6 +1,6 @@
 <?php 
 include 'connect.php';
-$sql = "SELECT * FROM matieres";
+$sql = "SELECT * FROM Matieres";
 
 $result = $conn->query($sql);
 ?>
@@ -91,21 +91,21 @@ tr:nth-child(even) {
 
             <tr>
 
-            <td><?php echo $row['Code_Matiere']; ?></td>
+            <td><?php echo $row['CodeMatiere']; ?></td>
 
-            <td><?php echo $row['Nom_Matiere']; ?></td>
+            <td><?php echo $row['NomMatiere']; ?></td>
 
-            <td><?php echo $row['Coef_Matiere']; ?></td>
+            <td><?php echo $row['CoefMatiere']; ?></td>
 
             <td><?php echo $row['Departement']; ?></td>
 
             <td><?php echo $row['Semestre']; ?></td>
 
-            <td><?php echo $row['Options']; ?></td>
+            <td><?php echo $row['OptionMatiere']; ?></td>
             
-            <td><?php echo $row['Nb_Heure_CI']; ?></td>
+            <td><?php echo $row['NbHeureCI']; ?></td>
 
-            <td><?php echo $row['Nb_Heure_TP']; ?></td>
+            <td><?php echo $row['NbHeureTP']; ?></td>
 
             <td><?php echo $row['TypeLabo']; ?></td>
 
@@ -122,8 +122,8 @@ tr:nth-child(even) {
   
 
             <td>
-            <a href="UpdateMatier.php?id=<?php echo $row['PK_Matieres']; ?>" class="button">Update</a>
-            <a href="DeleteMatier.php?id=<?php echo $row['PK_Matieres']; ?>" class="button">Delete</a>
+            <a href="UpdateMatier.php?id=<?php echo $row['CodeMatiere']; ?>" class="button">Update</a>
+            <a href="DeleteMatier.php?id=<?php echo $row['CodeMatiere']; ?>" class="button">Delete</a>
             </tr>                       
        
 <?php       }

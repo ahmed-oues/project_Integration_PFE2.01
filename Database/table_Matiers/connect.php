@@ -3,11 +3,11 @@
 
 $servername = "localhost";
 
-$username = "root"; 
+$username = "user"; 
 
-$password = ""; 
+$password = "user"; 
 
-$dbname = "scolarite";  
+$dbname = "Scolarite";  
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 

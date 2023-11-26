@@ -23,10 +23,9 @@ if(isset($_POST['submit']))
     }
 
     else{
-
-
-        $sql= "INSERT INTO `matieres` (Code_Matiere, Nom_Matiere, Coef_Matiere, Departement, Semestre,
-        Options, Nb_Heure_CI, Nb_Heure_TP, TypeLabo, Bonus, Categories, SousCategories, DateDeb,DateFin) 
+                                       
+        $sql= "INSERT INTO `Matieres` (CodeMatiere, NomMatiere, CoefMatiere, Departement, Semestre,
+        OptionMatiere, NbHeureCI, NbHeureTP, TypeLabo, Bonus, Categories, SousCategories, DateDeb, DateFin) 
         VALUES ('$CodeM','$NomM', '$CoefM', '$Dept', ' $Smstre', '$Optn', '$NbrHrCI', ' $NbrHrTP', 
          '$TL', '$Bonus', '$Categ', '$SousCateg', '$DateDeb', '$DateFin')";
    

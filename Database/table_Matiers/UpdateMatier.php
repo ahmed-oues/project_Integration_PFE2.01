@@ -5,7 +5,7 @@ if (isset($_GET['id'])) {
 
     $id = $_GET['id']; 
 
-    $sql = "SELECT * FROM `matieres` WHERE `PK_Matieres`='$id'";
+    $sql = "SELECT * FROM `Matieres` WHERE `CodeMatiere`='$id'";
 
     $result = $conn->query($sql); 
 
@@ -14,21 +14,21 @@ if (isset($_GET['id'])) {
         while ($row = $result->fetch_assoc()) {
 
            
-             $CM=$row['Code_Matiere']; 
+             $CM=$row['CodeMatiere']; 
 
-             $NM=$row['Nom_Matiere']; 
+             $NM=$row['NomMatiere']; 
 
-             $Cf=$row['Coef_Matiere']; 
+             $Cf=$row['CoefMatiere']; 
 
              $Dpt=$row['Departement']; 
 
              $Smtr=$row['Semestre']; 
 
-             $Opt=$row['Options']; 
+             $Opt=$row['OptionMatiere']; 
             
-             $NBHCI =$row['Nb_Heure_CI']; 
+             $NBHCI =$row['NbHeureCI']; 
 
-             $NBHTP=$row['Nb_Heure_TP']; 
+             $NBHTP=$row['NbHeureTP']; 
 
              $TpL=$row['TypeLabo']; 
 
@@ -68,22 +68,22 @@ if(isset($_POST['submit']))
     }
 
     else{
-        $sql = "UPDATE `matieres` SET 
-                `Code_Matiere`='$CodeM',
-                `Nom_Matiere`='$NomM',
-                `Coef_Matiere`='$CoefM',
+        $sql = "UPDATE `Matieres` SET 
+                `CodeMatiere`='$CodeM',
+                `NomMatiere`='$NomM',
+                `CoefMatiere`='$CoefM',
                 `Departement`='$Dept',
                 `Semestre`='$Smstre',
-                `Options`='$Optn',
-                `Nb_Heure_CI`='$NbrHrCI',
-                `Nb_Heure_TP`='$NbrHrTP',
+                `OptionMatiere`='$Optn',
+                `NbHeureCI`='$NbrHrCI',
+                `NbHeureTP`='$NbrHrTP',
                 `TypeLabo`='$TL',
                 `Bonus`='$Bonus',
                 `Categories`='$Categ',
                 `SousCategories`='$SousCateg',
                 `DateDeb`='$DateDeb',
                 `DateFin`='$DateFin'
-                WHERE `PK_Matieres`='$id'";
+                WHERE `CodeMatiere`='$id'";
 
         $result = $conn->query($sql);
 

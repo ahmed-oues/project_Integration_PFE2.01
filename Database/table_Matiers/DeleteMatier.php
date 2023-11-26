@@ -6,7 +6,7 @@ if (isset($_GET['id'])) {
 
     $id = $_GET['id'];
 
-    $sql = "DELETE FROM `matieres` WHERE `PK_Matieres`='$id'";
+    $sql = "DELETE FROM `Matieres` WHERE `CodeMatiere`='$id'";
 
      $result = $conn->query($sql);
 
