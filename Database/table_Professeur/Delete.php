@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['matriculeProf'])) {
 
     try {
         
-        $sql = "DELETE FROM prof WHERE `Matricule Prof` = :matriculeProf";
+        $sql = "DELETE FROM Prof WHERE `Matricule Prof` = :matriculeProf";
         $stmt = $idcon->prepare($sql);
         $stmt->bindParam(':matriculeProf', $Matricule_Prof, PDO::PARAM_INT);
     

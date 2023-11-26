@@ -606,6 +606,59 @@ LOCK TABLES `sess` WRITE;
 /*!40000 ALTER TABLE `sess` DISABLE KEYS */;
 /*!40000 ALTER TABLE `sess` ENABLE KEYS */;
 UNLOCK TABLES;
+DROP TABLE IF EXISTS Prof;
+
+-- Create the new Prof table with the updated structure
+CREATE TABLE Prof (
+Matricule Prof smallint NOT NULL,
+Nom char(50) NULL,
+Prénom char(50) NULL,
+CIN ou Passeport char(15) NULL,
+Identifiant CNRPS char(15) NULL,
+Date de naissance DATETIME NULL,
+Nationalité char(20) NULL,
+Sexe (M/F) char(1) NULL,
+Date  Ent Adm DATETIME NULL,
+Date Ent Etbs DATETIME NULL,
+Diplôme char(30) NULL,
+Adresse char(50) NULL,
+Ville char(50) NULL,
+Code postal smallint NULL,
+N° Téléphone char(16) NULL,
+Grade char(25) NULL,
+Date de nomination dans le grade DATETIME NULL,
+Date de titulirisation DATETIME NULL,
+N° Poste char(10) NULL,
+Département char(55) NULL,
+Situation char(35) NULL,
+Spécialité char(35) NULL,
+N° de Compte char(30) NULL,
+Banque char(15) NULL,
+Agence char(35) NULL,
+Adr pendant les vacances char(50) NULL,
+Tél pendant les vacances char(16) NULL,
+Lieu de naissance char(25) NULL,
+Début du Contrat DATETIME NULL,
+Fin du Contrat DATETIME NULL,
+Type de Contrat char(5) NULL,
+NB contrat ISETSOUSSE tinyint NULL,
+NB contrat Autre Etb char(10) NULL,
+Bureau char(10) NULL,
+Email char(60) NULL,
+Email Interne char(60) NULL,
+NomArabe char(35) NULL,
+PrenomArabe char(25) NULL,
+LieuNaisArabe char(20) NULL,
+AdresseArabe char(50) NULL,
+VilleArabe char(25) NULL,
+Disponible char(10) NULL DEFAULT 'oui',
+SousSP char(35) NULL,
+EtbOrigine char(50) NULL,
+TypeEnsg char(30) NULL,
+ControlAcces char(11) NULL,
+PRIMARY KEY (Matricule Prof)
+);
+
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;

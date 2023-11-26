@@ -84,7 +84,7 @@
     <?php
     include 'db_connection.php'; 
 
-    $query = "SELECT * FROM prof";
+    $query = "SELECT * FROM Prof";
     $result = $idcon->query($query);
 
     if ($result) {

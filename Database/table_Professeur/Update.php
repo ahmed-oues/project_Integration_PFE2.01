@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $typeEnsg = $_POST['typeEnsg'];
     $controlAcces = $_POST['controlAcces'];
 
-    $req = "UPDATE prof 
+    $req = "UPDATE Prof 
     SET 
         `Nom` = '$nom', 
         `Prénom` = '$prenom', 
