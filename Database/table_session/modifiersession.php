@@ -9,7 +9,7 @@
         <form action="modifiersession1.php" method="post">
         <div class="flex-container">
     <div class="flex-item">
-        (*)Numero <input type="text" name="Numerosess">
+        (*)Numero <input type="text" name="Numero">
     </div>
     <div class="flex-item">
         (*)Annee <input type="text" name="Annee">
@@ -18,7 +18,7 @@
 
 <div class="flex-item">
                     (*)sem 
-                    <select name="sem">
+                    <select name="Sem">
                         <option value="1">1</option>
                         <option value="2">2</option>
                     </select>
@@ -33,7 +33,7 @@ Debsem <input type="date" name="Debsem"> <br>
 Finsem <input type="date" name="Finsem"> <br>
 Annea<input type="text" name="Annea"> <br>
 Anneab <input type="text" name="Anneab"> <br>
-semAB<select name="semab">
+semAB<select name="SemAb">
                 <option value="A">A</option>
                 <option value="B">B</option>
             </select><br>

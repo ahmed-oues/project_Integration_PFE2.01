@@ -1,15 +1,14 @@
 <?php
 require "connexion.php";
-$numero = $_POST['Numerosess'] ;
 $annee = $_POST['Annee'] ;
-$sem = $_POST['sem'] ;
+$sem = $_POST['Sem'] ;
 $debut = $_POST['Debut'] ;
 $fin = $_POST['Fin'] ;
 $debsem = $_POST['Debsem'] ;
 $finsem = $_POST['Finsem'] ;
 $annea = $_POST['Annea'] ;
 $anneab = $_POST['Anneab'] ;
-$semab = $_POST['semab'] ;
+$semab = $_POST['SemAb'] ;
 
 
 $isValid = true;

@@ -101,20 +101,20 @@ tr:hover {
     <?php while ($ligne = $stmt->fetch()) { ?>
       
             <tr>
-                <td><?php echo $ligne['numero'] ?></td>
-                <td><?php echo $ligne['annee'] ?></td>
-                <td><?php echo $ligne['sem'] ?></td>
-                <td><?php echo $ligne['debut'] ?></td>
-                <td><?php echo $ligne['fin'] ?></td>
-                <td><?php echo $ligne['debsem'] ?></td>
-                <td><?php echo $ligne['finsem'] ?></td>
-                <td><?php echo $ligne['annea'] ?></td>
-                <td><?php echo $ligne['anneab'] ?></td>
-                <td><?php echo $ligne['semab'] ?></td>
+                <td><?php echo $ligne['Numero'] ?></td>
+                <td><?php echo $ligne['Annee'] ?></td>
+                <td><?php echo $ligne['Sem'] ?></td>
+                <td><?php echo $ligne['Debut'] ?></td>
+                <td><?php echo $ligne['Fin'] ?></td>
+                <td><?php echo $ligne['Debsem'] ?></td>
+                <td><?php echo $ligne['Finsem'] ?></td>
+                <td><?php echo $ligne['Annea'] ?></td>
+                <td><?php echo $ligne['Anneab'] ?></td>
+                <td><?php echo $ligne['SemAb'] ?></td>
  
-                <td><a class="btn" href='modifiersession.php?Cod=<?php echo $ligne['numero'] ?>'>Modifier</a></td>
+                <td><a class="btn" href='modifiersession.php?Cod=<?php echo $ligne['Numero'] ?>'>Modifier</a></td>
                 
-                <td><a class="btn" href='supprimersession.php?Cod=<?php echo $ligne['numero'] ?>'>
+                <td><a class="btn" href='supprimersession.php?Cod=<?php echo $ligne['Numero'] ?>'>
                 Supprimer</a></td>
             </tr>
         <?php } ?>

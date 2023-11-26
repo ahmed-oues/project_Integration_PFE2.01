@@ -1,7 +1,7 @@
 <?php
 $host="localhost";
-$user="root";
-$password="";
+$user="user";
+$password="user";
 $db="Scolarite";
 //connexion au serveur
 try{
