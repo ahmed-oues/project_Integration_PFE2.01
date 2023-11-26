@@ -16,7 +16,7 @@ to do DDL: 25/11/2023 AT 00:00
     JAMEL MIRAWI :
       finish debugging the table jours, 
       DEBUG TABLES: table_dossieretud, table_option.
-    AMIRA YOUSSEF : 
+    AMIRA YOUSSEF :  DONE (I might add the filter to typelocal and add the other table i worked on )
       DEBUG TABLES : table semaine, session, typlocal.
     AHMED OUESLATI :
       finish debugging the table table_profSituation(FIRASS) 
