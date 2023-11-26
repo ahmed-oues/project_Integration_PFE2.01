@@ -42,7 +42,10 @@ if (isset($_POST['update'])) {
 
     if ($daysDifference > 7) {
         $errorMessage = "Erreur : La période entre la date de début et la date de fin ne peut pas dépasser 7 jours.";
-    } else {
+    }elseif($daysDifference < 7){
+        $errorMessage = "Erreur : La période entre la date de début et la date de fin ne peut pas etre inférieur à 7 jours.";
+
+    }else {
         // Proceed with the update
         $sql2 = "UPDATE semaine SET DateDebut='$DateDebut', DateFin='$DateFin', Session='$Session' WHERE NumSem = $NumSem";
         $res = $conn->query($sql2);
@@ -97,7 +100,7 @@ if (isset($_POST['update'])) {
                 <div class="boutton">
                     <td><input type="submit" Value="Update" name="update"></td>
                     <td><a href="index.php">accueil</a></td>
-                    <td><input type="reset" Value="Annuler" name="reset"></td>
+                    <td><input type="reset" Value="Annuler" name="reset"  onclick="cancelForm()"></td>
                 </div>
             </tr>
         </table>
@@ -118,6 +121,12 @@ if (isset($_POST['update'])) {
             validateDates(); 
             return true; 
         }
+
+        function cancelForm() {
+            // Redirect to the index page
+            window.location.href = "index.php";
+        }
+
     </script>
 </body>
 

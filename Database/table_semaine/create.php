@@ -19,8 +19,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Check if the difference between dates is greater than 7 days
         $daysDifference = (strtotime($DateFin) - strtotime($DateDebut)) / (60 * 60 * 24);
 
-        if ($daysDifference > 7) {
+        if ($daysDifference > 7 ) {
             $errorMessage = "Erreur : La période entre la date de début et la date de fin ne peut pas dépasser 7 jours.";
+        }elseif($daysDifference < 7){
+            $errorMessage = "Erreur : La période entre la date de début et la date de fin ne peut pas etre inférieur à 7 jours.";
+
         } else {
             // If the session number doesn't exist and the date difference is acceptable, proceed with the insertion
             $sql = "INSERT INTO semaine (DateDebut, DateFin, Session) VALUES ('$DateDebut', '$DateFin', '$Session')";
@@ -69,9 +72,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </tr>
             <tr>
                 <div class="boutton">
-                    <td><input type="submit" value="Valider" name="submit"></td>
+                    <td><input type="submit" value="Valider" name="submit" ></td>
                     <td><a href="index.php">Accueil</a></td>
-                    <td><input type="reset" value="Annuler" name="reset"></td>
+                    <td><input type="reset" value="Annuler" name="reset" onclick="cancelForm()"></td>
                 </div>
             </tr>
         </table>
@@ -99,8 +102,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         function validateForm() {
             validateDates(); 
+            window.location.href = "index.php";
             return true; 
         }
+        function cancelForm() {
+            // Redirect to the index page
+            window.location.href = "index.php";
+        }
+
     </script>
 </body>
 </html>
