@@ -10,6 +10,9 @@
 <h1>Update Form:</h1>
 
 <?php
+
+include("db_connection.php");
+
 if (isset($_GET['Option']) && isset($_GET['Departement'])) {
 
     $option = $_GET['Option'];
