@@ -11,14 +11,12 @@
 
 <?php
 
-include("db_connection.php");
-
 if (isset($_GET['Option']) && isset($_GET['Departement'])) {
 
     $option = $_GET['Option'];
     $departement = $_GET['Departement'];
 
-    $conn = new mysqli("localhost", "root", "", "Scolarite");
+    $conn = new mysqli("localhost", "user", "user", "Scolarite");
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
