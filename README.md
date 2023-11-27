@@ -21,3 +21,6 @@ to do DDL: 25/11/2023 AT 00:00
       DEBUG TABLES: table_Professeur, table_Matiers.
 
 Jamel : the code of the two tables  jours,dossieretud dosnt mutch the database, and the filter in option dosnt work (grami said he will fix it) bye
+
+Updates :
+Med Amin Grami : updated index, problems in Option Tables.
