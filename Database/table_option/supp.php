@@ -3,13 +3,13 @@ include("db_connection.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['supp'])) {
-        if (isset($_POST['Option']) && isset($_POST['Département'])) {
+        if (isset($_POST['Option']) && isset($_POST['Departement'])) {
             $option = $_POST['Option'];
-            $département = $_POST['Département'];
+            $departement = $_POST['Departement'];
 
-            $sql = "DELETE FROM Options WHERE `Option` = ? AND `Département` = ?";
+            $sql = "DELETE FROM Options WHERE `Option` = ? AND `Departement` = ?";
             $stmt = $conn->prepare($sql);
-            $stmt->bind_param("ss", $option, $département);
+            $stmt->bind_param("ss", $option, $departement);
 
             if ($stmt->execute()) {
                 header("Location:home.php");
@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
             $stmt->close();
         } else {
-            echo "Option and Département are not set in the POST request.";
+            echo "Option and Departement are not set in the POST request.";
         }
     }
 }
