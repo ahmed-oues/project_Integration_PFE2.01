@@ -10,27 +10,27 @@
 <h1>Update Form:</h1>
 
 <?php
-if (isset($_GET['Option']) && isset($_GET['Département'])) {
+if (isset($_GET['Option']) && isset($_GET['Departement'])) {
 
     $option = $_GET['Option'];
-    $département = $_GET['Département'];
+    $departement = $_GET['Departement'];
 
     $conn = new mysqli("localhost", "root", "", "Scolarite");
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    $sql = 'SELECT `Option`, `Département`, `OptionAraB`, `CodeOption` FROM Options WHERE `Option` = ? AND `Département` = ?';
+    $sql = 'SELECT `Option`, `Departement`, `OptionAraB`, `CodeOption` FROM Options WHERE `Option` = ? AND `Departement` = ?';
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ss", $option, $département);
+    $stmt->bind_param("ss", $option, $departement);
     $stmt->execute();
-    $stmt->bind_result($option, $département, $optionAraB, $codeOption);
+    $stmt->bind_result($option, $departement, $optionAraB, $codeOption);
     if ($stmt->fetch()) {
         echo '<form action="updated.php" method="POST">
                 <input type="hidden" name="CodeOption" value="' . $codeOption . '">
                 <label for="Option">Option:</label>
                 <input type="text" id="Option" name="Option" value="'. $option . '" readonly>
-                <label for="Département">Département:</label>
-                <input type="text" id="Département" name="Département" value="' . $département . '" readonly>
+                <label for="Departement">Departement:</label>
+                <input type="text" id="Departement" name="Departement" value="' . $departement . '" readonly>
                 <label for="OptionAraB">OptionAraB:</label>
                 <input type="text" id="OptionAraB" name="OptionAraB" value="' . $optionAraB . '" maxlength="10" required>
                 <label for="codeOption">CodeOption:</label>
@@ -39,13 +39,13 @@ if (isset($_GET['Option']) && isset($_GET['Département'])) {
             </form>';
     }
     else {
-        echo "Record not found for Option: " . $option . " and Département: " . $département;
+        echo "Record not found for Option: " . $option . " and Departement: " . $departement;
     }
     $stmt->close();
     $conn->close();
 }
 else {
-    echo "Invalid or missing Option and Département parameters.";
+    echo "Invalid or missing Option and Departement parameters.";
 }
 ?>
 </body>
