@@ -36,24 +36,24 @@
 
     <?php
     include("db_connection.php");
-    $sql = 'SELECT `Option`, `Departement`, `OptionAraB`, `CodeOption` FROM Options ';
+    $sql = 'SELECT * FROM Options ';
 
-    if (!empty($_GET['filterOption']) || !empty($_GET['filterDepartment'])) {
-        $sql .= 'WHERE ';
-        $conditions = array();
-        if (!empty($_GET['filterOption'])) {
-            $conditions[] = '`Option` = "' . $_GET['filterOption'] . '"';
-        }
-        if (!empty($_GET['filterDepartment'])) {
-            $conditions[] = '`Departement` = "' . $_GET['filterDepartment'] . '"';
-        }
-        $sql .= implode(' AND ', $conditions);
-    }
-    if (isset($_GET['order']) && $_GET['order'] === 'CodeOption') {
-        $sql .= ' ORDER BY CodeOption ASC';
-    } else {
-        $sql .= ' ORDER BY Option , Departement ASC';
-    }
+    // if (!empty($_GET['filterOption']) || !empty($_GET['filterDepartment'])) {
+    //     $sql .= 'WHERE ';
+    //     $conditions = array();
+    //     if (!empty($_GET['filterOption'])) {
+    //         $conditions[] = '`Option` = "' . $_GET['filterOption'] . '"';
+    //     }
+    //     if (!empty($_GET['filterDepartment'])) {
+    //         $conditions[] = '`Departement` = "' . $_GET['filterDepartment'] . '"';
+    //     }
+    //     $sql .= implode(' AND ', $conditions);
+    // }
+    // if (isset($_GET['order']) && $_GET['order'] === 'CodeOption') {
+    //     $sql .= ' ORDER BY CodeOption ASC';
+    // } else {
+    //     $sql .= ' ORDER BY Option , Departement ASC';
+    // }
 
     $result = $conn->query($sql);
 
