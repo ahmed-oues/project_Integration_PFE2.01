@@ -25,7 +25,7 @@ if (isset($_GET['Option']) && isset($_GET['Département'])) {
     $stmt->execute();
     $stmt->bind_result($option, $département, $optionAraB, $codeOption);
     if ($stmt->fetch()) {
-        echo '<form action="crud.php" method="POST">
+        echo '<form action="updated.php" method="POST">
                 <input type="hidden" name="CodeOption" value="' . $codeOption . '">
                 <label for="Option">Option:</label>
                 <input type="text" id="Option" name="Option" value="'. $option . '" readonly>
