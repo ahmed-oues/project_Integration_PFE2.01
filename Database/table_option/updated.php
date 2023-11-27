@@ -2,10 +2,10 @@
 include("db_connection.php");
 
     if (isset($_POST['update'])) {
-        $option = isset($_POST['Option']) ? $_POST['Option'] : null;
-        $departement = isset($_POST['Departement']) ? $_POST['Departement'] : null;
-        $optionAraB = isset($_POST['OptionAraB']) ? $_POST['OptionAraB'] : null;
-        $codeOption = isset($_POST['CodeOption']) ? $_POST['CodeOption'] : null;
+        $option = $_POST['Option'];
+        $departement = $_POST['Departement'];
+        $optionAraB = $_POST['OptionAraB'];
+        $codeOption = $_POST['CodeOption'];
 
         // Update the existing record
         $sql = "UPDATE Options SET `OptionAraB` = ?, `CodeOption` = ? WHERE `Option` = ? AND `Departement` = ?";

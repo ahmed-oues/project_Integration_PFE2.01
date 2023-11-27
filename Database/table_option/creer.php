@@ -30,10 +30,10 @@
 
 
         <label for="OptionAraB">OptionAraB:</label>
-        <input type="text" id="OptionAraB" name="OptionAraB" maxlength="10" required>
+        <input type="text" id="OptionAraB" name="OptionAraB" required>
         <br />
         <label for="CodeOption">CodeOption:</label>
-        <input type="number" min="1" maxlength="10" id="CodeOption" name="CodeOption" required>
+        <input type="number" id="CodeOption" name="CodeOption" required>
         <br />
         <button type="submit" name="create" class="update">Créer</button>
 

@@ -4,10 +4,10 @@ include("db_connection.php");
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (isset($_POST['create'])) {
-        $option = isset($_POST['Option']) ;
-        $departement = isset($_POST['Departement']) ;
-        $optionAraB = isset($_POST['OptionAraB']) ;
-        $codeOption = isset($_POST['CodeOption']) ;
+        $option = $_POST['Option'] ;
+        $departement = $_POST['Departement'] ;
+        $optionAraB = $_POST['OptionAraB'] ;
+        $codeOption = $_POST['CodeOption'] ;
 
         // Check if the combination already exists
         $checkSql = "SELECT COUNT(*) FROM Options WHERE `Option` = ? AND `Departement` = ?";
