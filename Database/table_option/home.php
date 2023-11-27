@@ -52,7 +52,7 @@
     if (isset($_GET['order']) && $_GET['order'] === 'CodeOption') {
         $sql .= ' ORDER BY CodeOption ASC';
     } else {
-        $sql .= ' ORDER BY Option ASC, Departement ASC';
+        $sql .= ' ORDER BY Option , Departement ASC';
     }
 
     $result = $conn->query($sql);
