@@ -1,26 +1,53 @@
-# project_Integration_PFE2.01
+# Database Project - Readme
 
-lets collect all resources and get everything to work
+## Introduction
 
-to do :
- create folder in google drive and share it with our classmate the send us there code .
- Link all tables together .
-done tables: table Etudiant, department, started in the firas mess, ratvol, half table jour.
+This repository contains the database schema for our project and its missing 20 tables. We have organized the tables into several categories for better management and understanding, soo keep the same format going.
 
-to do DDL: 25/11/2023 AT 00:00
-    AMIN GRAMI :
-      finish the index and do the routing between TABLES,
-      DEBUG TABLES: table_Inscriptions.
-    JAMEL MIRAWI :
-      finish debugging the table jours,
-      DEBUG TABLES: table_dossieretud, table_option.
-    AMIRA YOUSSEF :  DONE (I might add the filter to typelocal and add the other table i worked on )
-      DEBUG TABLES : table semaine, session, typlocal.
-    AHMED OUESLATI :
-      finish debugging the table table_profSituation(FIRASS)
-      DEBUG TABLES: table_Professeur, table_Matiers.
+## Table Categories
 
-Jamel : the code of the two tables  jours,dossieretud dosnt mutch the database, and the filter in option dosnt work (grami said he will fix it) bye
+### Team Members
+1. Ahmed
+2. Amira
+3. Grami
+4. Jmael
 
-Updates :
-Med Amin Grami : Table options fixed.
+### Assigned Tables
+
+#### Ahmed
+- Gouvernorats
+- Pieces
+- Classes
+- JSSD
+- Conges
+
+#### Amira
+- Salles
+- HeureSup
+- Situations
+- NumAction
+- ModifGrade
+
+#### Grami
+- Cellules
+- AbsEnsg
+- OptionsNiveau
+- Matieres
+- Sessions
+
+#### Jmael
+- Grades
+- JSSDoid
+- MembreCell
+- Repartition
+- AbsEnsg
+
+## Instructions for Usage
+
+1. Clone the repository.
+2. Import the SQL script into your database management system.
+3. Explore and use the tables as needed.
+4. llokfor your table in the draive : https://drive.google.com/drive/folders/14a5UkjEBhelJfmOA3S3ltFF_q90pkcxQ?fbclid=IwAR3cbkeT89EcmDvHFYce99_IWORn_nMND4bUyM2Sb5H9HtvS0-MW0Mhn-M8
+5. debug it and integrate it to our project.
+
+Feel free to reach out if you have any questions or need further assistance.
