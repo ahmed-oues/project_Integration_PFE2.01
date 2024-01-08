@@ -1,6 +1,6 @@
 # Database Project - Readme
 
-## Introduction
+## Introduction  DDL 09/01/2024 AT 23:59
 
 This repository contains the database schema for our project and its missing 20 tables. We have organized the tables into several categories for better management and understanding, soo keep the same format going.
 
