@@ -659,6 +659,19 @@ ControlAcces char(11) NULL,
 PRIMARY KEY (Matricule Prof)
 );
 
+CREATE TABLE `jssd` (
+  `Jour` char(10) NOT NULL,
+  `Séance` char(3) NOT NULL,
+  `Salle` char(10) NOT NULL,
+  `NDist` int(11) NOT NULL,
+  `Groupe` char(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+ALTER TABLE `jssd`
+  ADD UNIQUE KEY `unique_combination` (`Jour`,`Séance`,`Salle`,`NDist`,`Groupe`);
+COMMIT;
+INSERT INTO `jssd` (`Jour`, `Séance`, `Salle`, `NDist`, `Groupe`) VALUES
+('lundi', '5', 'gjf2', 100, 'dsi'),
+('mardi', '3', 'o7', 789, 'ti1');
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;

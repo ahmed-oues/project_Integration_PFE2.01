@@ -3,7 +3,7 @@ include 'connexion.php';
 
 if(isset($_GET['delete'])){
     $jourToDelete = $_GET['delete'];
-    $deleteSql = "DELETE FROM JSSD WHERE Jour='$jourToDelete'";
+    $deleteSql = "DELETE FROM jssd WHERE Jour='$jourToDelete'";
     if ($conn->query($deleteSql) === TRUE) {
         echo "Record deleted successfully";
     } else {
@@ -19,7 +19,7 @@ if(isset($_POST['update'])){
     $ndist = $_POST['ndist'];
     $groupe = $_POST['groupe'];
 
-    $updateSql = "UPDATE JSSD SET Séance='$seance', Salle='$salle', NDist=$ndist, Groupe='$groupe' WHERE Jour='$jour'";
+    $updateSql = "UPDATE jssd SET Séance='$seance', Salle='$salle', NDist=$ndist, Groupe='$groupe' WHERE Jour='$jour'";
 
     if ($conn->query($updateSql) === TRUE) {
         echo "Record updated successfully";
@@ -29,7 +29,7 @@ if(isset($_POST['update'])){
 }
 
 
-$sql = "SELECT * FROM JSSD";
+$sql = "SELECT * FROM jssd";
 $result = $conn->query($sql);
 ?>
 

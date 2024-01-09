@@ -8,14 +8,14 @@ if(isset($_POST['submit'])){
     $ndist = $_POST['ndist'];
     $groupe = $_POST['groupe'];
 
-    $sql = "INSERT INTO JSSD (Jour, Séance, Salle, NDist, Groupe) VALUES ('$jour', '$seance', '$salle', $ndist, '$groupe')";
+    $sql = "INSERT INTO jssd (Jour, Séance, Salle, NDist, Groupe) VALUES ('$jour', '$seance', '$salle', $ndist, '$groupe')";
 
-    if ($conn->query($sql) === TRUE) {
+    if ($conn->query($sql)) {
         
         $lastInsertedId = $conn->insert_id;
         
-        header("Location: update.php?jour=$lastInsertedId");
-        exit(); 
+        // header("Location: update.php?jour=$lastInsertedId");
+        // exit(); 
     } else {
         echo "Error creating record: " . $conn->error;
     }
@@ -73,13 +73,13 @@ $conn->close();
         </style>
 </head>
 <body>
-    <form method="post" action="create.php">
+    <form method="post" action="Create.php">
         Jour: <input type="text" name="jour"><br>
         Séance: <input type="text" name="seance"><br>
         Salle: <input type="text" name="salle"><br>
         NDist: <input type="text" name="ndist"><br>
         Groupe: <input type="text" name="groupe"><br>
-        <input type="submit" name="submit" value="Create">
+        <input type="submit" name="submit">
     </form>
 </body>
 </html>
