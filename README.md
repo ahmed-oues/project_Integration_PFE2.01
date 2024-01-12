@@ -16,7 +16,7 @@ This repository contains the database schema for our project and its missing 20 
 
 #### Ahmed
 - Gouvernorats
-- Pieces
+- Pieces(no css)
 - Classes
 - JSSD
 - Conges
