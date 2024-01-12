@@ -18,15 +18,15 @@ This repository contains the database schema for our project and its missing 20 
 - Gouvernorats
 - Pieces(no css)
 - Classes
-- JSSD
-- Conges
+- JSSD (jamel)
+- Conges (jamel)
 
 #### Amira
 - Salles
 - HeureSup
 - Situations(404)
-- NumAction
-- ModifGrade
+- NumAction (ahmed)
+- ModifGrade (ahmed)
 
 #### Grami
 - Cellules
