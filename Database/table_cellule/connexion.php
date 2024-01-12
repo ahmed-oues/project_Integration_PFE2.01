@@ -1,7 +1,7 @@
 <?php
 $host="localhost";
-$user="root";
-$password="";
+$user="user";
+$password="user";
 $db="projet_integration";
 try
 {
