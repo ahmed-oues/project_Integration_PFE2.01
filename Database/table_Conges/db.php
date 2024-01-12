@@ -1,8 +1,8 @@
 <?php
 define('DB_SERVER', 'localhost');
-define('DB_USERMatriculeProf', 'root');
-define('DB_PASSWORD', '');
-define('DB_MatriculeProf', 'PDI3');
+define('DB_USERMatriculeProf', 'user');
+define('DB_PASSWORD', 'user');
+define('DB_MatriculeProf', 'Scolarite');
  
 $link = mysqli_connect(DB_SERVER, DB_USERMatriculeProf, DB_PASSWORD, DB_MatriculeProf);
  
