@@ -15,24 +15,24 @@
         
             echo "<select name='MatriculeProf' required>";
             require 'db_connection.php'; 
-            $result = $conn->query("select * FROM prof");
+            $result = $conn->query("select * FROM Prof");
             while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                echo '<option value="' . $row['MatriculeProf'] . '">' . $row['Nom'] . '</option>';
+                echo '<option value="' . $row['Matricule Prof'] . '">' . $row['Nom'] . '</option>';
             }
             echo "</select>";
 
             echo "<select name='CodeClasse' required>";
             $result2 = $conn->query("select * FROM classe");
             while ($row = $result2->fetch(PDO::FETCH_ASSOC)) {
-                echo '<option value="' . $row['CodeClasse'] . '">' . $row['numClasse'] . '</option>';
+                echo '<option value="' . $row['CodeClasse'] . '">' . $row['IntClasse'] . '</option>';
             }
             echo "</select>";
 
 
             echo "<select name='CodeMatiere' required>";
-            $result3 = $conn->query("select * FROM matiere");
+            $result3 = $conn->query("select * FROM matieres");
             while ($row = $result3->fetch(PDO::FETCH_ASSOC)) {
-                echo '<option value="' . $row['CodeMatière'] . '">' . $row['NomMatière'] . '</option>';
+                echo '<option value="' . $row['Code_Matiere'] . '">' . $row['Nom_Matiere'] . '</option>';
             }
             echo "</select>";
 

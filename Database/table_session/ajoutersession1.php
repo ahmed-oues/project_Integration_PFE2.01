@@ -20,7 +20,7 @@ if (empty($numero) || empty($annee) || empty($sem) || empty($debut) || empty($fi
 }
 
 if ($isValid) {
-    $reqCheck = $idcon->prepare("SELECT COUNT(*) FROM session WHERE Numero = ?");
+    $reqCheck = $idcon->prepare("SELECT COUNT(*) FROM Session WHERE Numero = ?");
     $reqCheck->bindParam(1, $numero);
     $reqCheck->execute();
     $count = $reqCheck->fetchColumn();
@@ -40,7 +40,7 @@ if ($isValid) {
 }
 
 if ($isValid) {
-    $req = $idcon->prepare("INSERT INTO session (Numero, Annee, sem, Debut, Fin, Debsem, Finsem, Annea, Anneab, SemAb) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $req = $idcon->prepare("INSERT INTO Session (Numero, Annee, sem, Debut, Fin, Debsem, Finsem, Annea, Anneab, SemAb) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
     $req->bindParam(1, $numero);
     $req->bindParam(2, $annee);
     $req->bindParam(3, $sem);

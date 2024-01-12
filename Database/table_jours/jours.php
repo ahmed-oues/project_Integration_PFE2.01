@@ -72,7 +72,7 @@ if(isset($_POST['ajout_jours'])) {
         $sql = "INSERT INTO Jours(code_prof, Session, Jours, Seance, Annee_universaire, Semestre) VALUES('$code_prof', '$Session', '$Jours', '$seance', '$Annee_universaire', '$Semestre')";
         $idcon->exec($sql);
 
-        header("Location: projet.php");
+        header("Location: Projet.php");
         exit;
     } else {
         // Afficher les erreurs

@@ -54,116 +54,116 @@
 <form action="process_filter.php" method="post">
   <table border="1">
     <tr>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png" class="filter-icon"> 
         <input type="text" name="Nom" class="filter-input" placeholder="Filter Nom">
 </th>
-         <th> <img src="/imges/filter.png/" class="filter-icon"> 
+         <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="datetime-local" name="DateNaisST" class="filter-input" placeholder="Filter DateNaisST">
         <input type="datetime-local" name="DateNaisFN" class="filter-input" placeholder="Filter DateNaisFN">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="text" name="NCIN" class="filter-input" placeholder="Filter NCIN">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="text" name="NCE" class="filter-input" placeholder="Filter NCE">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="text" name="TypBac" class="filter-input" placeholder="Filter TypBac">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="text" name="Prénom" class="filter-input" placeholder="Filter Prenom">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="number" name="Sexe" class="filter-input" placeholder="Filter Sexe">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="text" name="LieuNais" class="filter-input" placeholder="Filter LieuNais">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="text" name="Adresse" class="filter-input" placeholder="Filter Adresse">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="text" name="Ville" class="filter-input" placeholder="Filter Ville">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="number" name="CodePostal" class="filter-input" placeholder="Filter CodePostal">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="number" name="nnn" class="filter-input" placeholder="Filter NTel">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="text" name="CodClasse" class="filter-input" placeholder="Filter CodClasse">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="text" name="DécisionConseil" class="filter-input" placeholder="Filter DecisionConseil">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="text" name="AnnéeUniversitaire" class="filter-input" placeholder="Filter AnneeUniversitaire">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="number" name="Semestre" class="filter-input" placeholder="Filter Semestre">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <label for="Dispenser" class="filter-input">Dispenser:</label>
         <input type="checkbox" name="Dispenser" class="filter-input" placeholder="Filter Dispenser">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="datetime-local" name="AnneesOptST" class="filter-input" placeholder="Filter AnneesOpt">
         <input type="datetime-local" name="AnneesOptFN" class="filter-input" placeholder="Filter AnneesOpt">
 </th>
-        <th> <img src="/imges/filter.png/"class="filter-icon"> 
+        <th> <img src="./imges/filter.png/"class="filter-icon"> 
         <input type="datetime-local" name="DatePremiereInscpST" class="filter-input" placeholder="Filter DatePremiereInscp">
         <input type="datetime-local" name="DatePremiereInscpFN" class="filter-input" placeholder="Filter DatePremiereInscp">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="text" name="Gouvernorat" class="filter-input" placeholder="Filter Gouvernorat">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="text" name="MentionBac" class="filter-input" placeholder="Filter MentionBac">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="text" name="Nationalite" class="filter-input" placeholder="Filter Nationalite">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="text" name="CodeCNSS" class="filter-input" placeholder="Filter CodeCNSS">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="text" name="NomArabe" class="filter-input" placeholder="Filter NomArabe">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="text" name="PrenomArabe" class="filter-input" placeholder="Filter PrenomArabe">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="text" name="LieuNaisArabe" class="filter-input" placeholder="Filter LieuNaisArabe">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="text" name="AdresseArabe" class="filter-input" placeholder="Filter AdresseArabe">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="text" name="VilleArabe" class="filter-input" placeholder="Filter VilleArabe">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="text" name="GouvernoratArabe" class="filter-input" placeholder="Filter GouvernoratArabe">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="text" name="TypeBacAB" class="filter-input" placeholder="Filter TypeBacAB">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="text" name="Photo" class="filter-input" placeholder="Filter Photo">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="text" name="Origine" class="filter-input" placeholder="Filter Origine">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="text" name="SituationDepart" class="filter-input" placeholder="Filter SituationDepart">
 </th>
-        <th> <img src="/imges/filter.png/"  class="filter-icon"> 
+        <th> <img src="./imges/filter.png/"  class="filter-icon"> 
         <input type="text" name="NBAC" class="filter-input" placeholder="Filter NBAC">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="number" name="Redaut" class="filter-input" placeholder="Filter Redoublant">
 </th>
-        <th> <img src="/imges/filter.png/" class="filter-icon"> 
+        <th> <img src="./imges/filter.png/" class="filter-icon"> 
         <input type="submit" value="Submit"></th>
     </tr>
 </form>

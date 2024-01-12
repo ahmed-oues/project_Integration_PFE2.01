@@ -25,7 +25,7 @@ if ($isValid && ($debut >= $fin || $debsem >= $finsem)) {
 }
 
 if ($isValid) {
-    $req = $idcon->prepare("UPDATE session SET Annee = ?, sem = ?, Debut = ?, Fin = ?, Debsem = ?, Finsem = ?, Annea = ?, Anneab = ?, SemAb = ? WHERE Numero = ?");
+    $req = $idcon->prepare("UPDATE Session SET Annee = ?, sem = ?, Debut = ?, Fin = ?, Debsem = ?, Finsem = ?, Annea = ?, Anneab = ?, SemAb = ? WHERE Numero = ?");
     $req->execute([$annee, $sem, $debut, $fin, $debsem, $finsem, $annea, $anneab, $semab, $numero]);
 
     header('Location: affichersession.php');

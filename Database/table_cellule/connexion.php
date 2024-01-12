@@ -2,7 +2,7 @@
 $host="localhost";
 $user="user";
 $password="user";
-$db="projet_integration";
+$db="Scolarite";
 try
 {
     

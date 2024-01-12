@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `salle`
 --
 
-CREATE TABLE `salle` (
+CREATE TABLE `Salle` (
   `Salle` varchar(20) NOT NULL,
   `Departement` varchar(55) DEFAULT NULL,
   `Categorie` varchar(12) DEFAULT NULL,
@@ -45,7 +45,7 @@ CREATE TABLE `salle` (
 -- Dumping data for table `salle`
 --
 
-INSERT INTO `salle` (`Salle`, `Departement`, `Categorie`, `Responsable`, `Charge`, `Nb_place_examen`, `Nb_lignes`, `Nb_col`, `Nb_surv`, `Type`, `Disponible`) VALUES
+INSERT INTO `Salle` (`Salle`, `Departement`, `Categorie`, `Responsable`, `Charge`, `Nb_place_examen`, `Nb_lignes`, `Nb_col`, `Nb_surv`, `Type`, `Disponible`) VALUES
 ('LI2.4', 'Informatique', 'tp', 'Mr foulen ', 25, 25, 0, 0, 0, 'TP ', 8),
 ('LI2.3', 'Gestion', 'laboratoire', 'Mr felten', 26, 0, 0, 0, 0, 'TP', 1);
 COMMIT;

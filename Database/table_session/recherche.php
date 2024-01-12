@@ -7,7 +7,7 @@ $resultats = [];
 
 if (!empty($searchType) && !empty($searchValue)) {
 
-    $query = "SELECT numero, annee, sem, debut, fin, debsem, finsem, annea, anneab, semab FROM session WHERE $searchType = :searchValue";
+    $query = "SELECT numero, annee, sem, debut, fin, debsem, finsem, annea, anneab, semab FROM Session WHERE $searchType = :searchValue";
     $req = $idcon->prepare($query);
 
     $req->bindParam(':searchValue', $searchValue);

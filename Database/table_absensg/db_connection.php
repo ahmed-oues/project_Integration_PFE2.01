@@ -3,7 +3,7 @@
 $host = "localhost";
 $user = "user";
 $password = "user";
-$db = "scolarite";
+$db = "Scolarite";
 
 function connect($host, $db, $user, $password)
 {

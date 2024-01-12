@@ -1,6 +1,6 @@
 <?php
 require "connexion.php";
-$req = "SELECT * FROM session";
+$req = "SELECT * FROM Session";
 $stmt = $idcon->query($req);
 $stmt->setFetchMode(PDO::FETCH_ASSOC);
 ?>

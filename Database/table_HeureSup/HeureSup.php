@@ -8,10 +8,10 @@ class HeureSup {
     }
 
     public function ajouterHeureSup($session, $matprof, $ci, $tp, $tot,$con) {
-        $query = "select * from heuresup where Session = '$session' and MatProf = '$matprof'";
+        $query = "select * from HeureSup where Session = '$session' and MatProf = '$matprof'";
         $result = mysqli_query($con,$query);
         if(mysqli_num_rows($result)>0){
-            echo '<h4>Cette heureSup existe déjà</h4>';
+            echo '<h4>Cette HeureSup existe déjà</h4>';
         }
         else{
 
@@ -43,7 +43,7 @@ class HeureSup {
 
 
     public function afficherrHeureSup($con){
-        $query = "select * from heuresup ";
+        $query = "select * from HeureSup ";
         $result = mysqli_query($con,$query);
         return $result ;
     }
@@ -52,15 +52,15 @@ class HeureSup {
     public function afficherrHeureSupFiltre($con,$session,$matprof){
         if($session == null && 
          $matprof == null){
-            $query = "select * from heuresup ";}
+            $query = "select * from HeureSup ";}
         elseif ($session == null) {
-            $query = "select * from heuresup where MatProf = '$matprof'";
+            $query = "select * from HeureSup where MatProf = '$matprof'";
         }
         elseif ($matprof == null) {
-            $query = "select * from heuresup where Session = '$session'";
+            $query = "select * from HeureSup where Session = '$session'";
         }
         else{
-            $query = "select * from heuresup WHERE Session = '$session' AND MatProf = '$matprof'";
+            $query = "select * from HeureSup WHERE Session = '$session' AND MatProf = '$matprof'";
         }
         $result = mysqli_query($con,$query);
         return $result ;
