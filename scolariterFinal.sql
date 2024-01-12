@@ -71,6 +71,7 @@ CREATE TABLE `Departements` (
 
 LOCK TABLES `Departements` WRITE;
 /*!40000 ALTER TABLE `Departements` DISABLE KEYS */;
+INSERT INTO `Departements` VALUES ('infoo','rouitbi adnen','124','dep info','1');
 /*!40000 ALTER TABLE `Departements` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -156,6 +157,7 @@ CREATE TABLE `Etudiant` (
 
 LOCK TABLES `Etudiant` WRITE;
 /*!40000 ALTER TABLE `Etudiant` DISABLE KEYS */;
+INSERT INTO `Etudiant` VALUES ('ahmed oueslati','2024-01-24 19:32:00','1121113','123','eco','ss',0,'gaafour','gaafour  siliana','gaafour',6110,'54906119','C001','h','s',3,0,'2024-01-25 19:32:00','2024-01-17 19:32:00','SOUUSEE','bien','kdzok','zd','oueslati','ahmed','djozo','gaafour  siliana','gaafour','zdzdzd','ahh','zdzdzdzd','zdzdzdzdzd','adi','11211',1);
 /*!40000 ALTER TABLE `Etudiant` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -212,6 +214,32 @@ INSERT INTO `Grades` VALUES ('A',3.5,4,3,'أ',2.5,16);
 UNLOCK TABLES;
 
 --
+-- Table structure for table `HeureSup`
+--
+
+DROP TABLE IF EXISTS `HeureSup`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `HeureSup` (
+  `Session` int NOT NULL,
+  `MatProf` smallint NOT NULL,
+  `CI` double DEFAULT NULL,
+  `TP` double DEFAULT NULL,
+  `Tot` double DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `HeureSup`
+--
+
+LOCK TABLES `HeureSup` WRITE;
+/*!40000 ALTER TABLE `HeureSup` DISABLE KEYS */;
+INSERT INTO `HeureSup` VALUES (5,123,1.5,1.5,3),(8,12,2,3,5);
+/*!40000 ALTER TABLE `HeureSup` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `Inscriptions`
 --
 
@@ -260,16 +288,15 @@ DROP TABLE IF EXISTS `Jours`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Jours` (
-  `N` int NOT NULL,
-  `Lundi` char(10) DEFAULT NULL,
-  `Mardi` char(10) DEFAULT NULL,
-  `Mercredi` char(10) DEFAULT NULL,
-  `Jeudi` char(10) DEFAULT NULL,
-  `Vendredi` char(10) DEFAULT NULL,
-  `Samedi` char(10) DEFAULT NULL,
-  `CodeProf` smallint DEFAULT NULL,
-  PRIMARY KEY (`N`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `id` int NOT NULL AUTO_INCREMENT,
+  `code_prof` varchar(255) NOT NULL,
+  `Session` varchar(255) NOT NULL,
+  `Jours` varchar(255) NOT NULL,
+  `Seance` varchar(255) NOT NULL,
+  `Annee_universaire` varchar(255) NOT NULL,
+  `Semestre` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -278,6 +305,7 @@ CREATE TABLE `Jours` (
 
 LOCK TABLES `Jours` WRITE;
 /*!40000 ALTER TABLE `Jours` DISABLE KEYS */;
+INSERT INTO `Jours` VALUES (1,'123','123','vendredi','S1','2042','1');
 /*!40000 ALTER TABLE `Jours` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -313,6 +341,7 @@ CREATE TABLE `Matieres` (
 
 LOCK TABLES `Matieres` WRITE;
 /*!40000 ALTER TABLE `Matieres` DISABLE KEYS */;
+INSERT INTO `Matieres` VALUES ('123','arabc',1,'info',' 5','opt',1,1,'info',1,'info','dsi','2024-02-07 19:37:00','2024-02-10 19:37:00');
 /*!40000 ALTER TABLE `Matieres` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -362,6 +391,31 @@ CREATE TABLE `Options` (
 LOCK TABLES `Options` WRITE;
 /*!40000 ALTER TABLE `Options` DISABLE KEYS */;
 /*!40000 ALTER TABLE `Options` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Piece`
+--
+
+DROP TABLE IF EXISTS `Piece`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `Piece` (
+  `Typepiece` int NOT NULL AUTO_INCREMENT,
+  `LibPiece` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`Typepiece`),
+  UNIQUE KEY `LibPiece` (`LibPiece`)
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Piece`
+--
+
+LOCK TABLES `Piece` WRITE;
+/*!40000 ALTER TABLE `Piece` DISABLE KEYS */;
+INSERT INTO `Piece` VALUES (11,'forneture de buro '),(12,'lidude '),(13,'pass');
+/*!40000 ALTER TABLE `Piece` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -477,7 +531,7 @@ CREATE TABLE `RatVol` (
   `CodeMatiere` char(10) DEFAULT NULL,
   `Etat` bit(1) NOT NULL,
   PRIMARY KEY (`NumRatV`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -486,6 +540,7 @@ CREATE TABLE `RatVol` (
 
 LOCK TABLES `RatVol` WRITE;
 /*!40000 ALTER TABLE `RatVol` DISABLE KEYS */;
+INSERT INTO `RatVol` VALUES (3,123,'2024-01-26 19:31:00','1',1,'g005','22','m55','123',_binary '');
 /*!40000 ALTER TABLE `RatVol` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -512,6 +567,38 @@ CREATE TABLE `SEANCES` (
 LOCK TABLES `SEANCES` WRITE;
 /*!40000 ALTER TABLE `SEANCES` DISABLE KEYS */;
 /*!40000 ALTER TABLE `SEANCES` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Salle`
+--
+
+DROP TABLE IF EXISTS `Salle`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `Salle` (
+  `Salle` varchar(20) COLLATE utf8mb4_general_ci NOT NULL,
+  `Departement` varchar(55) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Categorie` varchar(12) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Responsable` varchar(10) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Charge` tinyint DEFAULT NULL,
+  `Nb_place_examen` tinyint DEFAULT NULL,
+  `Nb_lignes` tinyint DEFAULT NULL,
+  `Nb_col` tinyint DEFAULT NULL,
+  `Nb_surv` smallint DEFAULT NULL,
+  `Type` varchar(25) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Disponible` tinyint(1) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Salle`
+--
+
+LOCK TABLES `Salle` WRITE;
+/*!40000 ALTER TABLE `Salle` DISABLE KEYS */;
+INSERT INTO `Salle` VALUES ('LI2.4','Informatique','tp','Mr foulen ',25,25,0,0,0,'TP ',8),('LI2.3','Gestion','laboratoire','Mr felten',26,0,0,0,0,'TP',1);
+/*!40000 ALTER TABLE `Salle` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -619,6 +706,179 @@ LOCK TABLES `TypeLocal` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `absensg`
+--
+
+DROP TABLE IF EXISTS `absensg`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `absensg` (
+  `NumAbs` int NOT NULL,
+  `MatriculeProf` smallint NOT NULL,
+  `Session` int NOT NULL,
+  `DateAbs` datetime NOT NULL,
+  `Seance` char(10) NOT NULL,
+  `Motif` char(60) DEFAULT NULL,
+  `TypeSeance` char(10) DEFAULT NULL,
+  `CodeClasse` char(9) DEFAULT NULL,
+  `CodeMatiere` char(10) DEFAULT NULL,
+  `Justifier` bit(1) NOT NULL DEFAULT b'0',
+  PRIMARY KEY (`NumAbs`,`MatriculeProf`,`Session`,`DateAbs`,`Seance`),
+  KEY `MatriculeProf` (`MatriculeProf`),
+  KEY `CodeClasse` (`CodeClasse`),
+  KEY `CodeMatiere` (`CodeMatiere`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `absensg`
+--
+
+LOCK TABLES `absensg` WRITE;
+/*!40000 ALTER TABLE `absensg` DISABLE KEYS */;
+INSERT INTO `absensg` VALUES (531967,123,2,'2024-01-04 20:33:00','S1','AD','DA','','ffff',_binary '');
+/*!40000 ALTER TABLE `absensg` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `actionmember`
+--
+
+DROP TABLE IF EXISTS `actionmember`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `actionmember` (
+  `NumAction` int NOT NULL,
+  `NumProf` smallint NOT NULL,
+  `DatePart` datetime NOT NULL,
+  `Qualité` varchar(20) DEFAULT NULL,
+  `Dpt` char(55) DEFAULT NULL,
+  `Opt` char(55) DEFAULT NULL,
+  `Niveau` char(12) DEFAULT NULL,
+  `CodeMat` char(10) DEFAULT NULL,
+  `Remarque` varchar(30) DEFAULT NULL,
+  UNIQUE KEY `NumAction` (`NumAction`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `actionmember`
+--
+
+LOCK TABLES `actionmember` WRITE;
+/*!40000 ALTER TABLE `actionmember` DISABLE KEYS */;
+INSERT INTO `actionmember` VALUES (12,98,'2023-10-14 00:00:00','kjncdc','kndck jc','knekcnec','lkndck','kdjnck','0'),(45,344,'2023-10-07 00:00:00','kjbdkds','dnczkncz','dnjknzcz','ndkvnjzvdc','kdnkzdv','0');
+/*!40000 ALTER TABLE `actionmember` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `cellules`
+--
+
+DROP TABLE IF EXISTS `cellules`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `cellules` (
+  `NumProf` smallint DEFAULT NULL,
+  `NumMat` char(10) DEFAULT NULL,
+  `NumCell` int NOT NULL,
+  `NumSession` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `cellules`
+--
+
+LOCK TABLES `cellules` WRITE;
+/*!40000 ALTER TABLE `cellules` DISABLE KEYS */;
+INSERT INTO `cellules` VALUES (0,'5',1,1),(3,'5',2,1),(3,'5',3,2);
+/*!40000 ALTER TABLE `cellules` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `classe`
+--
+
+DROP TABLE IF EXISTS `classe`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `classe` (
+  `CodClasse` char(9) NOT NULL,
+  `IntClasse` char(60) DEFAULT NULL,
+  `Département` char(55) DEFAULT NULL,
+  `Optionc` char(55) DEFAULT NULL,
+  `Niveau` char(12) DEFAULT NULL,
+  `IntCalsseArabB` char(60) DEFAULT NULL,
+  `OptionAaraB` char(55) DEFAULT NULL,
+  `DepartementAaraB` char(55) DEFAULT NULL,
+  `NiveauAaraB` char(10) DEFAULT NULL,
+  `CodeEtape` varchar(8) DEFAULT NULL,
+  `CodeSalima` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`CodClasse`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `classe`
+--
+
+LOCK TABLES `classe` WRITE;
+/*!40000 ALTER TABLE `classe` DISABLE KEYS */;
+INSERT INTO `classe` VALUES ('3.2','dsi','informatique','info','3','info','oui','informatique','3','764','996'),('3.3','rsi','informatique','cyber','3','reseau','azerty','informatique','3','8778','8779'),('4000','SFR','inforamitque','hhda','3','jdaoj','adz','dazd','3','45454zd','54daz'),('azert','zerg','info','fdfs','aze','aze','aze','aze','zae','241','54');
+/*!40000 ALTER TABLE `classe` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `conges`
+--
+
+DROP TABLE IF EXISTS `conges`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `conges` (
+  `NumConge` int NOT NULL AUTO_INCREMENT,
+  `MatriculeProf` smallint DEFAULT NULL,
+  `DateDeb` date DEFAULT NULL,
+  `DateFin` date DEFAULT NULL,
+  PRIMARY KEY (`NumConge`)
+) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `conges`
+--
+
+LOCK TABLES `conges` WRITE;
+/*!40000 ALTER TABLE `conges` DISABLE KEYS */;
+INSERT INTO `conges` VALUES (58,111,'2023-10-10','2023-10-18'),(59,8977,'2023-10-18','2023-11-03'),(60,123,'2024-01-23','2024-01-27');
+/*!40000 ALTER TABLE `conges` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `gouvernorats`
+--
+
+DROP TABLE IF EXISTS `gouvernorats`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `gouvernorats` (
+  `Gouv` varchar(255) DEFAULT NULL,
+  `CodePostal` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `gouvernorats`
+--
+
+LOCK TABLES `gouvernorats` WRITE;
+/*!40000 ALTER TABLE `gouvernorats` DISABLE KEYS */;
+INSERT INTO `gouvernorats` VALUES ('Siliana ','6000');
+/*!40000 ALTER TABLE `gouvernorats` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `jssd`
 --
 
@@ -643,6 +903,73 @@ LOCK TABLES `jssd` WRITE;
 /*!40000 ALTER TABLE `jssd` DISABLE KEYS */;
 INSERT INTO `jssd` VALUES ('lundi','5','gjf2',100,'dsi'),('mardi','3','o7',789,'ti1'),('merc','5','g006',122,'ssd');
 /*!40000 ALTER TABLE `jssd` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `matieres`
+--
+
+DROP TABLE IF EXISTS `matieres`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `matieres` (
+  `Code_Matiere` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
+  `Nom_Matiere` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Coef_Matiere` float DEFAULT NULL,
+  `Departement` varchar(55) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Semestre` varchar(12) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Options` varchar(55) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Nb_Heure_CI` double DEFAULT NULL,
+  `Nb_Heure_TP` double DEFAULT NULL,
+  `TypeLabo` varchar(13) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Bonus` double DEFAULT NULL,
+  `Categories` varchar(35) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `SousCategories` varchar(35) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `DateDeb` datetime DEFAULT NULL,
+  `DateFin` datetime DEFAULT NULL,
+  `PK_Matieres` int NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`PK_Matieres`),
+  UNIQUE KEY `Code_Matiere` (`Code_Matiere`)
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `matieres`
+--
+
+LOCK TABLES `matieres` WRITE;
+/*!40000 ALTER TABLE `matieres` DISABLE KEYS */;
+INSERT INTO `matieres` VALUES ('ffff','dd',0,'',' ','',0,0,'',0,'','','0000-00-00 00:00:00','0000-00-00 00:00:00',2),('555','ffff',0,'s',' s','ss',0,0,'',0,'','','0000-00-00 00:00:00','0000-00-00 00:00:00',10),('fs','',0,'',' ','',0,0,'',0,'','','0000-00-00 00:00:00','0000-00-00 00:00:00',12),('vvv','ffff',0,'',' ','',0,0,'',0,'','','0000-00-00 00:00:00','0000-00-00 00:00:00',15),('fsh','',0,'',' ','',0,0,'',1,'','','2023-11-19 19:10:00','2023-11-22 19:10:00',16),('py','python',1,'info',' 1','oui',2,2,'ti1.4',1,'coding','langauge','2023-11-21 16:21:00','2023-11-30 16:21:00',17);
+/*!40000 ALTER TABLE `matieres` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `modifgrade`
+--
+
+DROP TABLE IF EXISTS `modifgrade`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `modifgrade` (
+  `NGmodif` int NOT NULL AUTO_INCREMENT,
+  `Grade` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
+  `DateNomin` datetime NOT NULL,
+  `MatProf` smallint NOT NULL,
+  PRIMARY KEY (`NGmodif`,`Grade`,`DateNomin`,`MatProf`),
+  UNIQUE KEY `UC_Grade` (`Grade`),
+  UNIQUE KEY `UC_DateNomin` (`DateNomin`),
+  UNIQUE KEY `UC_MatProf` (`MatProf`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `modifgrade`
+--
+
+LOCK TABLES `modifgrade` WRITE;
+/*!40000 ALTER TABLE `modifgrade` DISABLE KEYS */;
+INSERT INTO `modifgrade` VALUES (11,'etudiant','2023-11-13 00:00:00',3),(9,'ens','2023-11-09 00:00:00',4),(12,'A','2024-01-15 00:00:00',123);
+/*!40000 ALTER TABLE `modifgrade` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -687,4 +1014,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-01-12 16:41:19
+-- Dump completed on 2024-01-12 21:02:34
