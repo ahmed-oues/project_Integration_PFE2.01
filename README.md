@@ -24,23 +24,23 @@ This repository contains the database schema for our project and its missing 20 
 #### Amira
 - Salles
 - HeureSup
-- Situations
+- Situations(404)
 - NumAction
 - ModifGrade
 
 #### Grami
 - Cellules
 - AbsEnsg
-- OptionsNiveau
+- OptionsNiveau(404)
 - Matieres
 - Sessions
 
 #### Jmael
-- Grades
-- JSSDoid
-- MembreCell
-- Repartition
-- AbsEnsg
+- Grades(404)
+- JSSDoid(404)
+- MembreCell(404)
+- Repartition(404)
+- AbsEnsg4(404)
 
 ## Instructions for Usage
 
