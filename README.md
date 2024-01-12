@@ -16,31 +16,31 @@ This repository contains the database schema for our project and its missing 20 
 
 #### Ahmed
 - Gouvernorats
-- Pieces
+- Pieces(no css)
 - Classes
-- JSSD
-- Conges
+- JSSD (jamel)
+- Conges (jamel)
 
 #### Amira
-- Salles 
-- HeureSup 
+- Salles
+- HeureSup
 - Situations
-- NumAction 
-- ModifGrade  
+- NumAction
+- ModifGrade
 
 #### Grami
 - Cellules
 - AbsEnsg
-- OptionsNiveau
-- Matieres
-- Sessions
+- OptionsNiveau(404)
+- Matieres(jamel)
+- Sessions(jamel)
 
 #### Jmael
-- Grades
-- JSSDoid
-- MembreCell
-- Repartition
-- AbsEnsg
+- Grades(404)
+- JSSDoid(404)
+- MembreCell(404)
+- Repartition(404)
+- AbsEnsg4(404)
 
 ## Instructions for Usage
 

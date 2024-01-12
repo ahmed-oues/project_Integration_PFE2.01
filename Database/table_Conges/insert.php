@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <form action="insert.php" method="POST">
             <div class="form-group">
                 <label for="MatriculeProf">MatriculeProf:</label>
-                <input type="text" class="form-control" id="MatriculeProf" name="MatriculeProf">
+                <input type="number" class="form-control" id="MatriculeProf" name="MatriculeProf">
             </div>
             <div class="form-group">
                 <label for="DateDeb">DateDeb:</label>

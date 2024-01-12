@@ -2,9 +2,9 @@
 
 
 $hostname = "localhost";
-$username = "root";
-$password = "";
-$database = "scolarite";
+$username = "user";
+$password = "user";
+$database = "Scolarite";
 
 
 $con = new mysqli($hostname, $username, $password, $database);
