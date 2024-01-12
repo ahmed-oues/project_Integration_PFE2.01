@@ -32,8 +32,8 @@ This repository contains the database schema for our project and its missing 20 
 - Cellules
 - AbsEnsg
 - OptionsNiveau(404)
-- Matieres
-- Sessions
+- Matieres(jamel)
+- Sessions(jamel)
 
 #### Jmael
 - Grades(404)
