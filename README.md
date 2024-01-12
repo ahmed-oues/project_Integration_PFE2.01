@@ -22,11 +22,11 @@ This repository contains the database schema for our project and its missing 20 
 - Conges
 
 #### Amira
-- Salles
-- HeureSup
+- Salles 
+- HeureSup 
 - Situations
-- NumAction
-- ModifGrade
+- NumAction 
+- ModifGrade  
 
 #### Grami
 - Cellules
