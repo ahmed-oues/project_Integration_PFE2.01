@@ -372,10 +372,54 @@ DROP TABLE IF EXISTS `Prof`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Prof` (
-  `MatriculeProf` int NOT NULL,
-  `nom` char(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  PRIMARY KEY (`MatriculeProf`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `Matricule Prof` smallint NOT NULL,
+  `Nom` char(50) DEFAULT NULL,
+  `Prénom` char(50) DEFAULT NULL,
+  `CIN ou Passeport` char(15) DEFAULT NULL,
+  `Identifiant CNRPS` char(15) DEFAULT NULL,
+  `Date de naissance` datetime DEFAULT NULL,
+  `Nationalité` char(20) DEFAULT NULL,
+  `Sexe (M/F)` char(1) DEFAULT NULL,
+  `Date  Ent Adm` datetime DEFAULT NULL,
+  `Date Ent Etbs` datetime DEFAULT NULL,
+  `Diplôme` char(30) DEFAULT NULL,
+  `Adresse` char(50) DEFAULT NULL,
+  `Ville` char(50) DEFAULT NULL,
+  `Code postal` smallint DEFAULT NULL,
+  `N° Téléphone` char(16) DEFAULT NULL,
+  `Grade` char(25) DEFAULT NULL,
+  `Date de nomination dans le grade` datetime DEFAULT NULL,
+  `Date de titulirisation` datetime DEFAULT NULL,
+  `N° Poste` char(10) DEFAULT NULL,
+  `Département` char(55) DEFAULT NULL,
+  `Situation` char(35) DEFAULT NULL,
+  `Spécialité` char(35) DEFAULT NULL,
+  `N° de Compte` char(30) DEFAULT NULL,
+  `Banque` char(15) DEFAULT NULL,
+  `Agence` char(35) DEFAULT NULL,
+  `Adr pendant les vacances` char(50) DEFAULT NULL,
+  `Tél pendant les vacances` char(16) DEFAULT NULL,
+  `Lieu de naissance` char(25) DEFAULT NULL,
+  `Début du Contrat` datetime DEFAULT NULL,
+  `Fin du Contrat` datetime DEFAULT NULL,
+  `Type de Contrat` char(5) DEFAULT NULL,
+  `NB contrat ISETSOUSSE` tinyint DEFAULT NULL,
+  `NB contrat Autre Etb` char(10) DEFAULT NULL,
+  `Bureau` char(10) DEFAULT NULL,
+  `Email` char(60) DEFAULT NULL,
+  `Email Interne` char(60) DEFAULT NULL,
+  `NomArabe` char(35) DEFAULT NULL,
+  `PrenomArabe` char(25) DEFAULT NULL,
+  `LieuNaisArabe` char(20) DEFAULT NULL,
+  `AdresseArabe` char(50) DEFAULT NULL,
+  `VilleArabe` char(25) DEFAULT NULL,
+  `Disponible` char(10) DEFAULT 'oui',
+  `SousSP` char(35) DEFAULT NULL,
+  `EtbOrigine` char(50) DEFAULT NULL,
+  `TypeEnsg` char(30) DEFAULT NULL,
+  `ControlAcces` char(11) DEFAULT NULL,
+  PRIMARY KEY (`Matricule Prof`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -384,7 +428,7 @@ CREATE TABLE `Prof` (
 
 LOCK TABLES `Prof` WRITE;
 /*!40000 ALTER TABLE `Prof` DISABLE KEYS */;
-INSERT INTO `Prof` VALUES (123456,'Professor Name');
+INSERT INTO `Prof` VALUES (123,'oueslati','ahmed','1234567','11211','2023-11-08 14:52:00','tunis','m','2023-11-21 14:52:00','2023-11-28 14:52:00','info','sousee tunisie','sousse',6110,'+21654906119','A','2023-11-21 14:52:00','2023-11-15 14:52:00','1232','info','New Situation','info','1111','zitouna','zitouna','123','33422633','gafour','2023-11-24 14:53:00','2023-11-21 14:53:00','cdd',12,'1231','sousse','ahmed.oueslati6110@gmail.com','ahmed.oueslati6110@gmail.com','aa','aaaa','aaaaa','sousee tunisie','sousse','aaaaaa','aaaaaa','aaaaaaaaa','&&&&','&&&&');
 /*!40000 ALTER TABLE `Prof` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -478,7 +522,7 @@ DROP TABLE IF EXISTS `Semaine`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Semaine` (
-  `NumSem` int NOT NULL AUTO_INCREMENT,
+  `NumSem` int NOT NULL,
   `DateDebut` datetime DEFAULT NULL,
   `DateFin` datetime DEFAULT NULL,
   `Session` int NOT NULL,
@@ -575,6 +619,33 @@ LOCK TABLES `TypeLocal` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `jssd`
+--
+
+DROP TABLE IF EXISTS `jssd`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `jssd` (
+  `Jour` char(10) COLLATE utf8mb4_general_ci NOT NULL,
+  `Séance` char(3) COLLATE utf8mb4_general_ci NOT NULL,
+  `Salle` char(10) COLLATE utf8mb4_general_ci NOT NULL,
+  `NDist` int NOT NULL,
+  `Groupe` char(3) COLLATE utf8mb4_general_ci NOT NULL,
+  UNIQUE KEY `unique_combination` (`Jour`,`Séance`,`Salle`,`NDist`,`Groupe`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `jssd`
+--
+
+LOCK TABLES `jssd` WRITE;
+/*!40000 ALTER TABLE `jssd` DISABLE KEYS */;
+INSERT INTO `jssd` VALUES ('lundi','5','gjf2',100,'dsi'),('mardi','3','o7',789,'ti1'),('merc','5','g006',122,'ssd');
+/*!40000 ALTER TABLE `jssd` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `sess`
 --
 
@@ -606,72 +677,6 @@ LOCK TABLES `sess` WRITE;
 /*!40000 ALTER TABLE `sess` DISABLE KEYS */;
 /*!40000 ALTER TABLE `sess` ENABLE KEYS */;
 UNLOCK TABLES;
-DROP TABLE IF EXISTS Prof;
-
--- Create the new Prof table with the updated structure
-CREATE TABLE Prof (
-Matricule Prof smallint NOT NULL,
-Nom char(50) NULL,
-Prénom char(50) NULL,
-CIN ou Passeport char(15) NULL,
-Identifiant CNRPS char(15) NULL,
-Date de naissance DATETIME NULL,
-Nationalité char(20) NULL,
-Sexe (M/F) char(1) NULL,
-Date  Ent Adm DATETIME NULL,
-Date Ent Etbs DATETIME NULL,
-Diplôme char(30) NULL,
-Adresse char(50) NULL,
-Ville char(50) NULL,
-Code postal smallint NULL,
-N° Téléphone char(16) NULL,
-Grade char(25) NULL,
-Date de nomination dans le grade DATETIME NULL,
-Date de titulirisation DATETIME NULL,
-N° Poste char(10) NULL,
-Département char(55) NULL,
-Situation char(35) NULL,
-Spécialité char(35) NULL,
-N° de Compte char(30) NULL,
-Banque char(15) NULL,
-Agence char(35) NULL,
-Adr pendant les vacances char(50) NULL,
-Tél pendant les vacances char(16) NULL,
-Lieu de naissance char(25) NULL,
-Début du Contrat DATETIME NULL,
-Fin du Contrat DATETIME NULL,
-Type de Contrat char(5) NULL,
-NB contrat ISETSOUSSE tinyint NULL,
-NB contrat Autre Etb char(10) NULL,
-Bureau char(10) NULL,
-Email char(60) NULL,
-Email Interne char(60) NULL,
-NomArabe char(35) NULL,
-PrenomArabe char(25) NULL,
-LieuNaisArabe char(20) NULL,
-AdresseArabe char(50) NULL,
-VilleArabe char(25) NULL,
-Disponible char(10) NULL DEFAULT 'oui',
-SousSP char(35) NULL,
-EtbOrigine char(50) NULL,
-TypeEnsg char(30) NULL,
-ControlAcces char(11) NULL,
-PRIMARY KEY (Matricule Prof)
-);
-
-CREATE TABLE `jssd` (
-  `Jour` char(10) NOT NULL,
-  `Séance` char(3) NOT NULL,
-  `Salle` char(10) NOT NULL,
-  `NDist` int(11) NOT NULL,
-  `Groupe` char(3) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-ALTER TABLE `jssd`
-  ADD UNIQUE KEY `unique_combination` (`Jour`,`Séance`,`Salle`,`NDist`,`Groupe`);
-COMMIT;
-INSERT INTO `jssd` (`Jour`, `Séance`, `Salle`, `NDist`, `Groupe`) VALUES
-('lundi', '5', 'gjf2', 100, 'dsi'),
-('mardi', '3', 'o7', 789, 'ti1');
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -682,4 +687,4 @@ INSERT INTO `jssd` (`Jour`, `Séance`, `Salle`, `NDist`, `Groupe`) VALUES
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-25 19:39:48
+-- Dump completed on 2024-01-12 16:41:19
