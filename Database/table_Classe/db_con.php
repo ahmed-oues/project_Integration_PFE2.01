@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "gestionnaire_scolaire";
+$username = "user";
+$password = "user";
+$dbname = "Scolarite";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
